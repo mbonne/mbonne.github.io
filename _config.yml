@@ -1,12 +1,3 @@
-# _config.yml
-title: Personal Bio
-email: example@example.com
-
-# Configure navigation if your theme supports it
-navigation:
-  - name: Home
-    link: /
-  - name: Projects
-    link: /#projects
-  - name: Contact
-    link: "mailto:example@example.com"
+theme: jekyll-theme-minimal
+title: MBONNE
+description: 
