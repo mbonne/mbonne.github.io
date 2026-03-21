@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About me
-subtitle: Brief summary about me
+title: About
 ---
 
-mbonne:
+Senior IT professional. Background in systems engineering and infrastructure. Currently focused on technology leadership.
 
-- Experienced IT Systems and Infrastructure Engineer
-- Passionate Tech Enthusiast
+**Areas of focus:**
 
+- Infrastructure & systems engineering
+- Networking & security
+- Tooling & automation
+- Technology leadership
 
-### Github Scripts and Scraps
-
-[Repo Link](https://github.com/mbonne?tab=repositories)
+[GitHub](https://github.com/mbonne)
