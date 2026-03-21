@@ -11,3 +11,9 @@ ehthumbs.db
 Gemfile.lock
 
 beautiful-jekyll-theme-*.gem
+
+# Claude Code tooling — keep off public repo
+CLAUDE.md
+docs/
+.claude/
+_drafts/
