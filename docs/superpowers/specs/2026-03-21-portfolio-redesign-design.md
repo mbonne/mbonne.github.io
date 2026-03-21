@@ -131,7 +131,7 @@ social-network-links:
 
 url-pretty: "buildtestrun.com"
 title-on-all-pages: true
-excerpt_length: 50
+excerpt_length: 50 # words
 feed_show_excerpt: true
 feed_show_tags: true
 post_search: true
@@ -153,7 +153,8 @@ timezone: "Europe/London"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 5 # number of posts per page
+paginate_path: "/page:num/"
 
 kramdown:
   input: GFM
@@ -173,7 +174,6 @@ defaults:
 
 exclude:
   - CHANGELOG.md
-  - CNAME
   - Gemfile
   - Gemfile.lock
   - LICENSE
@@ -196,6 +196,7 @@ The following must be added to `.gitignore`. This keeps all Claude Code tooling,
 
 ```
 # Claude Code tooling — keep off public repo
+CLAUDE.md
 docs/
 .claude/
 _drafts/
@@ -300,8 +301,8 @@ File: `docs/published-log.md` (gitignored)
 ```markdown
 # Published Log
 
-| Source Note | Post File | Date Drafted | Status |
-|---|---|---|---|
+| Source Note | Post File | Date Drafted | Date Published | Status |
+|---|---|---|---|---|
 ```
 
 ---
