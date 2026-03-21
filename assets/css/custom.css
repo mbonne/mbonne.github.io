@@ -20,6 +20,7 @@
 /* ── Fonts ────────────────────────────────────────────────────────── */
 :root {
   --body-font: "CaskaydiaCove NF", "Cascadia Code", monospace;
+  color-scheme: dark;
 }
 
 code, pre, kbd, samp {
@@ -244,4 +245,81 @@ table th {
 
 table tr:nth-child(even) {
   background-color: #313342;
+}
+
+/* ── Mobile / Bootstrap dark overrides ───────────────────────────── */
+/* Belt-and-suspenders: force Dracula colours on elements that Bootstrap
+   or mobile browsers may paint light before stylesheets load.
+   navbar-col/navbar-text-col are already in _config.yml but may not
+   arrive before first paint on mobile — these rules act as fallback. */
+body {
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+
+.navbar.navbar-light,
+.navbar {
+  background-color: #1e1f29 !important;
+  border-color: #44475a !important;
+}
+
+.navbar.navbar-light .navbar-nav .nav-link,
+.navbar-nav .nav-link {
+  color: #f8f8f2 !important;
+}
+
+.navbar.navbar-light .navbar-brand,
+.navbar-brand {
+  color: #f8f8f2 !important;
+}
+
+.form-control {
+  background-color: #44475a;
+  color: #f8f8f2;
+  border-color: #6272a4;
+}
+
+.form-control:focus {
+  background-color: #44475a;
+  color: #f8f8f2;
+  border-color: #bd93f9;
+  box-shadow: 0 0 0 0.2rem rgba(189, 147, 249, 0.25);
+}
+
+.pagination .page-link {
+  background-color: #1e1f29;
+  color: #bd93f9;
+  border-color: #44475a;
+}
+
+.pagination .page-link:hover {
+  background-color: #44475a;
+  color: #50fa7b;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #44475a;
+  border-color: #bd93f9;
+  color: #f8f8f2;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: #1e1f29;
+  color: #6272a4;
+  border-color: #44475a;
+}
+
+.dropdown-menu {
+  background-color: #1e1f29;
+  border-color: #44475a;
+}
+
+.dropdown-item {
+  color: #f8f8f2;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #44475a;
+  color: #50fa7b;
 }
