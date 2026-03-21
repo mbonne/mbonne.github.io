@@ -96,6 +96,8 @@ defaults:
       social-share: false
       head-extra: head-extra.html
       footer-extra: footer-ip.html
+      js:
+        - /assets/js/post-enhancements.js
   - scope:
       path: ""
     values:

@@ -1,6 +1,23 @@
 /*
- * Font overrides
+ * Build Test Run — custom CSS
+ * Dracula palette overrides for Beautiful Jekyll
+ * https://draculatheme.com/contribute
+ *
+ * Dracula tokens:
+ *   Background:   #282a36
+ *   Current Line: #44475a
+ *   Foreground:   #f8f8f2
+ *   Comment:      #6272a4
+ *   Purple:       #bd93f9
+ *   Pink:         #ff79c6
+ *   Green:        #50fa7b
+ *   Orange:       #ffb86c
+ *   Cyan:         #8be9fd
+ *   Red:          #ff5555
+ *   Yellow:       #f1fa8c
  */
+
+/* ── Fonts ────────────────────────────────────────────────────────── */
 :root {
   --body-font: "CaskaydiaCove NF", "Cascadia Code", monospace;
 }
@@ -9,32 +26,7 @@ code, pre, kbd, samp {
   font-family: "CaskaydiaMono NF", "Cascadia Mono", monospace;
 }
 
-/* Subtitle — smaller to fit on one line */
-.intro-header .page-subheading {
-  font-size: 1.1rem;
-  letter-spacing: 0.05em;
-}
-
-/*
- * Dracula theme overrides for Build Test Run
- * Extends Beautiful Jekyll _config.yml colour vars
- * https://draculatheme.com/contribute
- *
- * Dracula palette reference:
- *   Background:   #282a36
- *   Current Line: #44475a
- *   Foreground:   #f8f8f2
- *   Comment:      #6272a4
- *   Cyan:         #8be9fd
- *   Green:        #50fa7b
- *   Orange:       #ffb86c
- *   Pink:         #ff79c6
- *   Purple:       #bd93f9
- *   Red:          #ff5555
- *   Yellow:       #f1fa8c
- */
-
-/* Inline code */
+/* ── Inline code ──────────────────────────────────────────────────── */
 code {
   background-color: #44475a;
   color: #f8f8f2;
@@ -43,8 +35,9 @@ code {
   border-radius: 3px;
 }
 
-/* Code blocks */
+/* ── Code blocks ──────────────────────────────────────────────────── */
 pre {
+  position: relative;
   background-color: #44475a;
   border: 1px solid #6272a4;
   border-radius: 4px;
@@ -52,6 +45,7 @@ pre {
 
 pre code {
   background-color: transparent;
+  color: #f8f8f2;
   padding: 0;
 }
 
@@ -61,7 +55,136 @@ pre code {
   border-radius: 4px;
 }
 
-/* Blockquotes */
+.highlight code,
+.highlight pre {
+  color: #f8f8f2;
+}
+
+/* ── Copy button ──────────────────────────────────────────────────── */
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: #6272a4;
+  color: #f8f8f2;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+  font-family: inherit;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+pre:hover .copy-btn {
+  opacity: 1;
+}
+
+.copy-btn:hover {
+  background: #bd93f9;
+  color: #282a36;
+}
+
+/* ── Dracula syntax highlighting (Rouge) ──────────────────────────── */
+/* Comments */
+.highlight .c, .highlight .c1, .highlight .cm,
+.highlight .cs, .highlight .cp, .highlight .ch { color: #6272a4; font-style: italic; }
+/* Keywords */
+.highlight .k, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kc { color: #ff79c6; }
+/* Keyword type */
+.highlight .kt { color: #8be9fd; font-style: italic; }
+/* Built-ins */
+.highlight .nb { color: #8be9fd; }
+/* Functions */
+.highlight .nf, .highlight .nc { color: #50fa7b; }
+/* Name attribute / tag */
+.highlight .na { color: #50fa7b; }
+.highlight .nt { color: #ff79c6; }
+/* Variables */
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi { color: #8be9fd; }
+/* Strings */
+.highlight .s, .highlight .s1, .highlight .s2,
+.highlight .sb, .highlight .sc, .highlight .sd,
+.highlight .se, .highlight .sh, .highlight .si,
+.highlight .sx, .highlight .sr, .highlight .ss { color: #f1fa8c; }
+/* Numbers */
+.highlight .m, .highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .mo, .highlight .il { color: #bd93f9; }
+/* Operators */
+.highlight .o, .highlight .ow { color: #ff79c6; }
+/* Punctuation / default text */
+.highlight .p, .highlight .n, .highlight .nl,
+.highlight .nn, .highlight .ni, .highlight .w { color: #f8f8f2; }
+/* Diff */
+.highlight .gd { color: #ff5555; }
+.highlight .gi { color: #50fa7b; }
+/* Errors */
+.highlight .err { color: #ff5555; }
+
+/* ── Article heading colours ──────────────────────────────────────── */
+.blog-post h1 { color: #bd93f9; }  /* purple  */
+.blog-post h2 { color: #ffb86c; }  /* orange  */
+.blog-post h3 { color: #50fa7b; }  /* green   */
+.blog-post h4 { color: #ff5555; }  /* red     */
+.blog-post h5 { color: #f1fa8c; }  /* yellow  */
+
+/* ── Floating TOC sidebar ─────────────────────────────────────────── */
+.post-toc {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  width: 210px;
+  background: #1e1f29;
+  border: 1px solid #44475a;
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-size: 0.78rem;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  z-index: 200;
+  display: none;
+}
+
+/* Only show TOC when there is enough horizontal space */
+@media (min-width: 1400px) {
+  .post-toc { display: block; }
+}
+
+.toc-label {
+  color: #6272a4;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.post-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-toc ul li a {
+  color: #6272a4;
+  text-decoration: none;
+  display: block;
+  padding: 2px 0;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+
+.post-toc ul li a:hover,
+.post-toc ul li a.toc-active { color: #50fa7b; }
+
+.toc-h1 { padding-left: 0; }
+.toc-h2 { padding-left: 0; }
+.toc-h3 { padding-left: 10px; }
+.toc-h4 { padding-left: 20px; }
+.toc-h5 { padding-left: 30px; }
+
+/* ── Blockquotes ──────────────────────────────────────────────────── */
 blockquote {
   background-color: #44475a;
   border-left: 4px solid #bd93f9;
@@ -70,7 +193,7 @@ blockquote {
   margin: 20px 0;
 }
 
-/* Search input in navbar */
+/* ── Navbar search ────────────────────────────────────────────────── */
 #nav-search-input {
   background-color: #44475a;
   color: #f8f8f2;
@@ -81,7 +204,7 @@ blockquote {
   color: #6272a4;
 }
 
-/* Tag labels */
+/* ── Tag labels ───────────────────────────────────────────────────── */
 .blog-tags a {
   background-color: #44475a;
   color: #bd93f9;
@@ -97,18 +220,18 @@ blockquote {
   text-decoration: none;
 }
 
-/* Post preview cards — ensure no white bleed from Bootstrap */
+/* ── Post preview cards ───────────────────────────────────────────── */
 .post-preview {
   background-color: #282a36;
   border-bottom: 1px solid #44475a;
 }
 
-/* Horizontal rules */
+/* ── Horizontal rules ─────────────────────────────────────────────── */
 hr {
   border-color: #44475a;
 }
 
-/* Table borders */
+/* ── Tables ───────────────────────────────────────────────────────── */
 table th,
 table td {
   border-color: #44475a;
