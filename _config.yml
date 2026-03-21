@@ -82,6 +82,7 @@ paginate_path: "/page:num/"
 
 kramdown:
   input: GFM
+  smart_quotes: ["apos", "apos", "quot", "quot"]
 
 defaults:
   - scope:
@@ -91,10 +92,12 @@ defaults:
       layout: "post"
       comments: false
       social-share: false
+      head-extra: head-extra.html
   - scope:
       path: ""
     values:
       layout: "page"
+      head-extra: head-extra.html
 
 exclude:
   - CHANGELOG.md

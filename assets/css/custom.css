@@ -2,7 +2,7 @@
  * Font overrides — replace serif body font with sans-serif
  */
 :root {
-  --body-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --body-font: "FiraCode Nerd Font", monospace;
 }
 
 /*
