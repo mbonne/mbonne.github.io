@@ -323,3 +323,23 @@ body {
   background-color: #44475a;
   color: #50fa7b;
 }
+
+/* ── Search results dropdown ──────────────────────────────────────── */
+#search-results-container {
+  background-color: #1e1f29;
+  border: 1px solid #44475a;
+  border-radius: 4px;
+  color: #f8f8f2;
+}
+
+#search-results-container a {
+  color: #bd93f9;
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+#search-results-container a:hover {
+  background-color: #44475a;
+  color: #50fa7b;
+}
