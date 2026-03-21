@@ -1,0 +1,14 @@
+<p id="visitor-info" style="font-size:0.78rem; color:#6272a4; margin-top:6px;"></p>
+<script>
+(function() {
+  fetch("https://ipapi.co/json/")
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var el = document.getElementById("visitor-info");
+      if (el && d.ip) {
+        el.textContent = "Your IP: " + d.ip + " | " + (d.city ? d.city + ", " : "") + (d.country_name || "Unknown");
+      }
+    })
+    .catch(function() {});
+})();
+</script>

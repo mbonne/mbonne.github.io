@@ -13,6 +13,8 @@ remote_theme: daattali/beautiful-jekyll
 ############################
 
 navbar-links:
+  Home: ""
+  Articles: ""
   About Me: "aboutme"
 
 ############################
@@ -60,7 +62,7 @@ share-links-active:
 page-col: "#282a36"
 text-col: "#f8f8f2"
 link-col: "#bd93f9"
-hover-col: "#ff79c6"
+hover-col: "#50fa7b"
 navbar-col: "#1e1f29"
 navbar-text-col: "#f8f8f2"
 navbar-border-col: "#44475a"
@@ -93,11 +95,13 @@ defaults:
       comments: false
       social-share: false
       head-extra: head-extra.html
+      footer-extra: footer-ip.html
   - scope:
       path: ""
     values:
       layout: "page"
       head-extra: head-extra.html
+      footer-extra: footer-ip.html
 
 exclude:
   - CHANGELOG.md

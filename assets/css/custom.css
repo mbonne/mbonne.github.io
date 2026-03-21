@@ -1,8 +1,18 @@
 /*
- * Font overrides — replace serif body font with sans-serif
+ * Font overrides
  */
 :root {
-  --body-font: "FiraCode Nerd Font", monospace;
+  --body-font: "CaskaydiaCove NF", "Cascadia Code", monospace;
+}
+
+code, pre, kbd, samp {
+  font-family: "CaskaydiaMono NF", "Cascadia Mono", monospace;
+}
+
+/* Subtitle — smaller to fit on one line */
+.intro-header .page-subheading {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
 }
 
 /*
