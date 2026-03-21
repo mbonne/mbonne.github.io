@@ -48,23 +48,34 @@ navbar-links:
 
 ### Colour Palette (initial)
 
-Dark, minimal. Subject to future update — Dracula and Nord are noted candidates for a future backlog item.
+Official Dracula theme (https://draculatheme.com/contribute). Purple as the primary accent, with green, orange, pink available for future use in custom CSS (code blocks, tags, etc.).
+
+| Dracula token | Hex | Usage |
+|---|---|---|
+| Background | `#282a36` | Page background |
+| Current Line | `#44475a` | Navbar/footer border |
+| Foreground | `#f8f8f2` | Body text, nav text |
+| Comment | `#6272a4` | Footer text (muted) |
+| Purple | `#bd93f9` | Links, accents |
+| Pink | `#ff79c6` | Hover states |
 
 Set via `_config.yml` colour variables:
 
 ```yaml
-page-col: "#1a1a1a"
-text-col: "#e0e0e0"
-link-col: "#4a9eff"
-hover-col: "#4a9eff"
-navbar-col: "#111111"
-navbar-text-col: "#e0e0e0"
-navbar-border-col: "#222222"
-footer-col: "#111111"
-footer-text-col: "#999999"
-footer-link-col: "#e0e0e0"
-footer-hover-col: "#4a9eff"
+page-col: "#282a36"
+text-col: "#f8f8f2"
+link-col: "#bd93f9"
+hover-col: "#ff79c6"
+navbar-col: "#1e1f29"
+navbar-text-col: "#f8f8f2"
+navbar-border-col: "#44475a"
+footer-col: "#1e1f29"
+footer-text-col: "#6272a4"
+footer-link-col: "#f8f8f2"
+footer-hover-col: "#bd93f9"
 ```
+
+Other Dracula colours (`#50fa7b` green, `#ffb86c` orange, `#8be9fd` cyan, `#ff5555` red, `#f1fa8c` yellow) are available in `assets/css/custom.css` for code blocks, tag labels, and other decorative elements.
 
 System fonts only. No web font loading.
 
@@ -137,19 +148,19 @@ feed_show_tags: true
 post_search: true
 edit_page_button: false
 
-page-col: "#1a1a1a"
-text-col: "#e0e0e0"
-link-col: "#4a9eff"
-hover-col: "#4a9eff"
-navbar-col: "#111111"
-navbar-text-col: "#e0e0e0"
-navbar-border-col: "#222222"
-footer-col: "#111111"
-footer-text-col: "#999999"
-footer-link-col: "#e0e0e0"
-footer-hover-col: "#4a9eff"
+page-col: "#282a36"
+text-col: "#f8f8f2"
+link-col: "#bd93f9"
+hover-col: "#ff79c6"
+navbar-col: "#1e1f29"
+navbar-text-col: "#f8f8f2"
+navbar-border-col: "#44475a"
+footer-col: "#1e1f29"
+footer-text-col: "#6272a4"
+footer-link-col: "#f8f8f2"
+footer-hover-col: "#bd93f9"
 
-timezone: "Europe/London"
+timezone: "Australia/Sydney"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
@@ -311,7 +322,7 @@ File: `docs/published-log.md` (gitignored)
 
 File: `docs/backlog.md` (gitignored)
 
-- [ ] Colour scheme — evaluate Dracula or Nord theme as an alternative to current dark palette
+- [ ] Colour scheme — evaluate Nord as an alternative to current Dracula palette
 - [ ] LinkedIn social link — add when ready
 - [ ] RSS feed — verify feed works correctly via remote theme
 - [ ] Comments — evaluate giscus (GitHub Discussions-backed)
