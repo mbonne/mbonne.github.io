@@ -42,6 +42,9 @@ feed_show_tags: true
 post_search: true
 edit_page_button: false
 
+site-css:
+  - "/assets/css/custom.css"
+
 share-links-active:
   twitter: false
   facebook: false

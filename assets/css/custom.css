@@ -1,0 +1,107 @@
+/*
+ * Dracula theme overrides for Build Test Run
+ * Extends Beautiful Jekyll _config.yml colour vars
+ * https://draculatheme.com/contribute
+ *
+ * Dracula palette reference:
+ *   Background:   #282a36
+ *   Current Line: #44475a
+ *   Foreground:   #f8f8f2
+ *   Comment:      #6272a4
+ *   Cyan:         #8be9fd
+ *   Green:        #50fa7b
+ *   Orange:       #ffb86c
+ *   Pink:         #ff79c6
+ *   Purple:       #bd93f9
+ *   Red:          #ff5555
+ *   Yellow:       #f1fa8c
+ */
+
+/* Inline code */
+code {
+  background-color: #44475a;
+  color: #f8f8f2;
+  border: none;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Code blocks */
+pre {
+  background-color: #44475a;
+  border: 1px solid #6272a4;
+  border-radius: 4px;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Rouge syntax highlighting wrapper */
+.highlight {
+  background-color: #44475a;
+  border-radius: 4px;
+}
+
+/* Blockquotes */
+blockquote {
+  background-color: #44475a;
+  border-left: 4px solid #bd93f9;
+  color: #f8f8f2;
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+/* Search input in navbar */
+#nav-search-input {
+  background-color: #44475a;
+  color: #f8f8f2;
+  border-color: #6272a4;
+}
+
+#nav-search-input::placeholder {
+  color: #6272a4;
+}
+
+/* Tag labels */
+.blog-tags a {
+  background-color: #44475a;
+  color: #bd93f9;
+  border-color: #44475a;
+  border-radius: 3px;
+  padding: 2px 8px;
+  text-decoration: none;
+}
+
+.blog-tags a:hover {
+  background-color: #6272a4;
+  color: #f8f8f2;
+  text-decoration: none;
+}
+
+/* Post preview cards — ensure no white bleed from Bootstrap */
+.post-preview {
+  background-color: #282a36;
+  border-bottom: 1px solid #44475a;
+}
+
+/* Horizontal rules */
+hr {
+  border-color: #44475a;
+}
+
+/* Table borders */
+table th,
+table td {
+  border-color: #44475a;
+}
+
+table th {
+  background-color: #44475a;
+  color: #f8f8f2;
+}
+
+table tr:nth-child(even) {
+  background-color: #313342;
+}
