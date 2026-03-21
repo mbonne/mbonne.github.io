@@ -343,3 +343,56 @@ body {
   background-color: #44475a;
   color: #50fa7b;
 }
+
+/* ── Mobile inline TOC ────────────────────────────────────────────── */
+.post-toc-inline {
+  background: #1e1f29;
+  border: 1px solid #44475a;
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin-bottom: 24px;
+  font-size: 0.78rem;
+}
+
+.post-toc-inline summary {
+  color: #6272a4;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+.post-toc-inline summary::-webkit-details-marker {
+  display: none;
+}
+
+.post-toc-inline ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.post-toc-inline ul li a {
+  color: #6272a4;
+  text-decoration: none;
+  display: block;
+  padding: 2px 0;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+
+.post-toc-inline ul li a:hover,
+.post-toc-inline ul li a.toc-active {
+  color: #50fa7b;
+}
+
+.post-toc-inline .toc-h3 { padding-left: 10px; }
+.post-toc-inline .toc-h4 { padding-left: 20px; }
+.post-toc-inline .toc-h5 { padding-left: 30px; }
+
+/* Hide inline TOC when sidebar is active */
+@media (min-width: 1400px) {
+  .post-toc-inline { display: none; }
+}
