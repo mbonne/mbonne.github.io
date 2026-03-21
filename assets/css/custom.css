@@ -392,6 +392,8 @@ body {
 .post-toc-inline .toc-h4 { padding-left: 20px; }
 .post-toc-inline .toc-h5 { padding-left: 30px; }
 
+.post-toc-inline .toc-label { display: none; }
+
 /* Hide inline TOC when sidebar is active */
 @media (min-width: 1400px) {
   .post-toc-inline { display: none; }
