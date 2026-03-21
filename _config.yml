@@ -13,8 +13,8 @@ remote_theme: daattali/beautiful-jekyll
 ############################
 
 navbar-links:
-  Home: ""
-  Articles: ""
+  Home: "/"
+  Articles: "/articles"
   About Me: "aboutme"
 
 ############################
