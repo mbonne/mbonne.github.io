@@ -104,7 +104,7 @@ HTTP security headers are not set by default. Adding them via Cloudflare Transfo
 
 Useful headers for a static site:
 
-```
+```http
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
