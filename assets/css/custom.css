@@ -368,6 +368,10 @@ body {
   display: none;
 }
 
+.post-toc-inline summary::marker {
+  display: none;
+}
+
 .post-toc-inline ul {
   list-style: none;
   padding: 0;
