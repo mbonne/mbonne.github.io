@@ -1,4 +1,11 @@
 /*
+ * Font overrides — replace serif body font with sans-serif
+ */
+:root {
+  --body-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/*
  * Dracula theme overrides for Build Test Run
  * Extends Beautiful Jekyll _config.yml colour vars
  * https://draculatheme.com/contribute

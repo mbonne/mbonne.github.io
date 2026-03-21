@@ -41,6 +41,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 post_search: true
 edit_page_button: false
+remove-ads: true
 
 site-css:
   - "/assets/css/custom.css"
