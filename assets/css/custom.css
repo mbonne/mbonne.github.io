@@ -446,6 +446,54 @@ body {
   .post-toc-inline { display: none; }
 }
 
+/* ── Back to top button ───────────────────────────────────────────── */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 47px;
+  height: 47px;
+  background: #282a36;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, color 0.15s;
+  color: #f8f8f2;
+  z-index: 999;
+  padding: 0;
+  box-shadow: 0 0 0 1px #44475a;
+}
+
+#back-to-top.btt-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover {
+  color: #50fa7b;
+}
+
+#back-to-top:hover .btt-progress {
+  stroke: #50fa7b;
+  transition: stroke 0.15s;
+}
+
+.btt-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btt-arrow {
+  position: relative;
+  z-index: 1;
+}
+
 /* ── GitHub repo cards (projects page) ───────────────────────────── */
 .repo-card {
   background-color: #44475a;
