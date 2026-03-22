@@ -445,3 +445,61 @@ body {
 @media (min-width: 1400px) {
   .post-toc-inline { display: none; }
 }
+
+/* ── GitHub repo cards (projects page) ───────────────────────────── */
+.repo-card {
+  background-color: #44475a;
+  border: 1px solid #6272a4;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.15s;
+}
+
+.repo-card:hover {
+  border-color: #bd93f9;
+}
+
+.repo-name {
+  color: #bd93f9;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.repo-name:hover {
+  color: #50fa7b;
+  text-decoration: none;
+}
+
+.repo-description {
+  color: #f8f8f2;
+  margin: 0.4rem 0 0.6rem;
+  font-size: 0.9rem;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: #6272a4;
+  align-items: center;
+}
+
+.repo-language {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.repo-lang-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.repos-status {
+  color: #6272a4;
+}
