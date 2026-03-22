@@ -24,6 +24,10 @@
     'Swift':      '#F05138'
   };
 
+  function escHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
   function relativeTime(dateStr) {
     var secs = Math.floor((Date.now() - new Date(dateStr)) / 1000);
     if (secs < 60) return 'just now';
@@ -44,17 +48,17 @@
     var langSpan = repo.language
       ? '<span class="repo-language">' +
           '<span class="repo-lang-dot" style="background:' + langColour + '"></span>' +
-          repo.language +
+          escHtml(repo.language) +
         '</span>'
       : '';
     var desc = repo.description
-      ? repo.description
+      ? escHtml(repo.description)
       : '<span style="color:#6272a4">No description</span>';
     return (
       '<div class="repo-card">' +
         '<div class="repo-card-header">' +
           '<a class="repo-name" href="' + repo.html_url + '" target="_blank" rel="noopener noreferrer">' +
-            repo.name +
+            escHtml(repo.name) +
           '</a>' +
         '</div>' +
         '<p class="repo-description">' + desc + '</p>' +
