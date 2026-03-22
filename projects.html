@@ -1,0 +1,26 @@
+---
+layout: page
+title: "Projects"
+description: "GitHub repositories and project-related posts from buildtestrun.com"
+js:
+  - /assets/js/github-repos.js
+---
+
+## GitHub Repositories
+
+<div id="github-repos-container"></div>
+
+## Project Posts
+
+{% assign project_posts = site.posts | where_exp: "post", "post.tags contains 'project'" %}
+{% if project_posts.size > 0 %}
+  {% for post in project_posts %}
+<div class="post-preview" style="padding: 0.75rem 0;">
+  <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a>
+  <p class="post-meta" style="margin:0.2rem 0 0.3rem;">{{ post.date | date: "%B %-d, %Y" }}</p>
+  {% if post.description %}<p style="margin:0;">{{ post.description }}</p>{% endif %}
+</div>
+  {% endfor %}
+{% else %}
+<p class="repos-status">No project posts yet.</p>
+{% endif %}
