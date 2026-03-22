@@ -2,7 +2,11 @@
 layout: post
 title: "Hardening Your Cloudflare Account"
 subtitle: "Account security basics and zone-level hardening for a solid starting position"
+description: "A practical guide to locking down your Cloudflare account: 2FA, API tokens, DNSSEC, SSL/TLS Full Strict, security headers via Transform Rules, and audit logging."
+date: 2026-03-21
+last_modified_at: 2026-03-21
 tags: [cloudflare, security, dns, hardening]
+schema_type: Article
 ---
 
 Cloudflare sits in front of your traffic, manages your DNS, and holds API credentials that can modify both. That makes the account itself a meaningful target. This post covers the fundamentals of locking it down properly, starting at the account level and working down to zone configuration.

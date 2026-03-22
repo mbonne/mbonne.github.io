@@ -2,7 +2,11 @@
 layout: post
 title: "Building This Site With Claude Code"
 subtitle: "Transparent about the tooling from day one"
+description: "How buildtestrun.com was built and maintained using Claude Code, with an Obsidian-based content pipeline and Beautiful Jekyll theme."
+date: 2026-03-21
+last_modified_at: 2026-03-21
 tags: [meta, claude, obsidian, tooling]
+schema_type: Article
 ---
 
 This site was built with Claude Code. That is not a footnote. It is the point.
