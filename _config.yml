@@ -23,6 +23,8 @@ navbar-links:
 
 avatar: "/assets/img/avatar-icon.png"
 round-avatar: true
+url: "https://buildtestrun.com"
+baseurl: ""
 
 ############################
 # Social links (footer)
