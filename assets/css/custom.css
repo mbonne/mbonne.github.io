@@ -194,15 +194,58 @@ blockquote {
   margin: 20px 0;
 }
 
-/* ── Navbar search ────────────────────────────────────────────────── */
-#nav-search-input {
-  background-color: #44475a;
-  color: #f8f8f2;
-  border-color: #6272a4;
+/* ── Navbar active link ───────────────────────────────────────────── */
+/* Our !important colour rule overrides Beautiful Jekyll's .active state.
+   Restore it here with a more specific rule. */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active .nav-link {
+  color: #50fa7b !important;
+  font-weight: 600;
 }
 
+/* ── Navbar search ────────────────────────────────────────────────── */
+/* Cover both the Beautiful Jekyll search input ID (#search-box) and
+   the nav-inline variant (#nav-search-input) */
+#search-box,
+#nav-search-input {
+  background-color: #44475a !important;
+  color: #f8f8f2 !important;
+  border-color: #6272a4 !important;
+}
+
+#search-box::placeholder,
 #nav-search-input::placeholder {
   color: #6272a4;
+}
+
+/* Search modal backdrop and container */
+.modal-content {
+  background-color: #282a36;
+  border-color: #44475a;
+  color: #f8f8f2;
+}
+
+/* Search results — cover both possible container IDs */
+#search-results,
+#search-results-container {
+  background-color: #1e1f29;
+  border: 1px solid #44475a;
+  border-radius: 4px;
+  color: #f8f8f2;
+}
+
+#search-results a,
+#search-results-container a {
+  color: #bd93f9;
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+#search-results a:hover,
+#search-results-container a:hover {
+  background-color: #44475a;
+  color: #50fa7b;
 }
 
 /* ── Tag labels ───────────────────────────────────────────────────── */

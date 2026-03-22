@@ -1,12 +1,32 @@
 <p id="visitor-info" style="font-size:0.78rem; color:#6272a4; margin-top:6px;"></p>
 <script>
 (function() {
+  var CACHE_KEY = "btr_v1_visitor_ip";
+  var TTL = 86400000; // 24 hours in ms
+
+  function render(data) {
+    var el = document.getElementById("visitor-info");
+    if (el && data.ip) {
+      el.textContent = "Your IP: " + data.ip + " | " + (data.city ? data.city + ", " : "") + (data.country_name || "Unknown");
+    }
+  }
+
+  try {
+    var cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+    if (cached && cached.timestamp && (Date.now() - cached.timestamp < TTL) && cached.ip) {
+      render(cached);
+      return;
+    }
+  } catch(e) {}
+
   fetch("https://ipapi.co/json/")
     .then(function(r) { return r.json(); })
     .then(function(d) {
-      var el = document.getElementById("visitor-info");
-      if (el && d.ip) {
-        el.textContent = "Your IP: " + d.ip + " | " + (d.city ? d.city + ", " : "") + (d.country_name || "Unknown");
+      if (d.ip) {
+        try {
+          localStorage.setItem(CACHE_KEY, JSON.stringify({ ip: d.ip, city: d.city, country_name: d.country_name, timestamp: Date.now() }));
+        } catch(e) {}
+        render(d);
       }
     })
     .catch(function() {});
