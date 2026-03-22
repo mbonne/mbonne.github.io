@@ -59,6 +59,7 @@ Then run it:
 ```bash
 sudo ssshp
 ```
+
 > Pro Tip: make a custom ~/bin folder for all the custom scripts, and add that to your path.
 
 ## Menu options
