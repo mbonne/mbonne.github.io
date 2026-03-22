@@ -15,6 +15,7 @@ remote_theme: daattali/beautiful-jekyll
 navbar-links:
   Home: "/"
   Articles: "/articles"
+  Projects: "/projects"
   About Me: "aboutme"
 
 ############################
