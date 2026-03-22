@@ -9,7 +9,10 @@ tags: [meta, claude, obsidian, tooling]
 schema_type: Article
 ---
 
-This site was built with Claude Code. That is not a footnote. It is the point.
+Full disclosure, This site was built with Claude Code. However the ideas and thoughts within are my own.
+I wanted to see what was possible with a couple weekends experiementing with Claude Code/Cowork to see what I could do with some crude prompting to get the site running.
+
+Over time I'll be making posts which use notes from my Obsidian vault. Often it'll be for some idea or information I've found useful or interesting while working in IT.
 
 ## What it is
 
