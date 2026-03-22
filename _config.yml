@@ -119,3 +119,5 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-remote-theme
+  - jekyll-last-modified-at
+  - jekyll-feed
