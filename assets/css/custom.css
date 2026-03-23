@@ -165,6 +165,15 @@ pre:hover .copy-btn {
 .page-content h4 { color: #ff5555; }
 .page-content h5 { color: #f1fa8c; }
 
+/* ── Post card titles — treat as article headers, not body sections ── */
+/* .post-title is an h2 in the listing but represents the article title */
+.post-title { color: #bd93f9; }          /* purple, same as h1        */
+.post-preview a:hover .post-title,
+.post-preview a:hover .post-subtitle { color: #50fa7b; } /* hover green */
+
+/* Ensure link hover colour applies where heading rules override it   */
+.page-content a:hover { color: #50fa7b; }
+
 /* ── Floating TOC sidebar ─────────────────────────────────────────── */
 .post-toc {
   position: fixed;
