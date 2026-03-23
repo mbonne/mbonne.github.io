@@ -12,6 +12,8 @@ Gemfile.lock
 
 beautiful-jekyll-theme-*.gem
 
+.worktrees/
+
 # Claude Code tooling — keep off public repo
 CLAUDE.md
 docs/
