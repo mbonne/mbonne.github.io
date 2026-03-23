@@ -158,6 +158,13 @@ pre:hover .copy-btn {
   text-align: center;
 }
 
+/* ── Page heading colours (layout: page) ─────────────────────────── */
+.page-content h1 { color: #bd93f9; }
+.page-content h2 { color: #ffb86c; }
+.page-content h3 { color: #50fa7b; }
+.page-content h4 { color: #ff5555; }
+.page-content h5 { color: #f1fa8c; }
+
 /* ── Floating TOC sidebar ─────────────────────────────────────────── */
 .post-toc {
   position: fixed;
