@@ -131,6 +131,33 @@ pre:hover .copy-btn {
 .blog-post h4 { color: #ff5555; }  /* red     */
 .blog-post h5 { color: #f1fa8c; }  /* yellow  */
 
+/* ── Responsive images ────────────────────────────────────────────── */
+.blog-post img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Captioned image figure ───────────────────────────────────────── */
+.post-figure {
+  margin: 1.5rem 0;
+}
+
+.post-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #44475a;
+}
+
+.post-figure figcaption {
+  color: #6272a4;
+  font-size: 0.82rem;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
 /* ── Floating TOC sidebar ─────────────────────────────────────────── */
 .post-toc {
   position: fixed;
@@ -309,6 +336,12 @@ body {
 .navbar.navbar-light .navbar-nav .nav-link,
 .navbar-nav .nav-link {
   color: #f8f8f2 !important;
+}
+
+/* ── Navbar hover ─────────────────────────────────────────────────── */
+.navbar.navbar-light .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+  color: #50fa7b !important;
 }
 
 .navbar.navbar-light .navbar-brand,
