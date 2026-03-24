@@ -166,8 +166,9 @@ pre:hover .copy-btn {
 .page-content h5 { color: #f1fa8c; }
 
 /* ── Post card titles — treat as article headers, not body sections ── */
-/* .post-title is an h2 in the listing but represents the article title */
-.post-title { color: #bd93f9; }          /* purple, same as h1        */
+/* .post-title is an h2 in the listing but represents the article title.
+   Must beat .page-content h2 (specificity 0,1,1) so use two classes. */
+.post-preview .post-title { color: #bd93f9; }   /* purple, same as h1  */
 .post-preview a:hover .post-title,
 .post-preview a:hover .post-subtitle { color: #50fa7b; } /* hover green */
 
