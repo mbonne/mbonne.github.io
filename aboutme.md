@@ -3,13 +3,8 @@ layout: page
 title: About
 ---
 
-Senior IT professional. Background in systems engineering and infrastructure. Currently focused on technology leadership.
+Started at the bottom of the stack and worked up. Career spans hardware repair, helpdesk, infrastructure, networking, project delivery, scripting, and automation. Now in an operations leadership role at an MSP. The hands-on background informs everything.
 
-**Areas of focus:**
-
-- Infrastructure & systems engineering
-- Networking & security
-- Tooling & automation
-- Technology leadership
+**Currently:** IT Service Operations Manager, overseeing service delivery at an MSP. Outside of work, the homelab runs experiments across automation, virtualisation, container orchestration, and various attempts to integrate AI agents before they integrate us.
 
 [GitHub](https://github.com/mbonne)
