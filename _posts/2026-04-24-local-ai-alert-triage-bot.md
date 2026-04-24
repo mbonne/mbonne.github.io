@@ -29,7 +29,7 @@ No essays. No hedging. Just the triage a competent sysadmin would give you at a 
 
 You can also @mention the bot to ask follow-up questions about a specific alert.
 
-The whole thing is under 300 lines of Python. Source: [github.com/mbonne/localai-bot](https://github.com/mbonne/localai-bot)
+The whole thing is under 300 lines of Python. Source: [github.com/isithuman-2026/localai-bot](https://github.com/isithuman-2026/localai-bot)
 
 ## Why local matters here
 
@@ -70,7 +70,7 @@ The bot is written for Discord but the triage logic is platform-agnostic. The `o
 Full instructions in the repo, but the short version:
 
 ```bash
-git clone https://github.com/mbonne/localai-bot
+git clone https://github.com/isithuman-2026/localai-bot
 cd localai-bot
 cp .env.example .env
 # fill in DISCORD_BOT_TOKEN, ALERTS_CHANNEL_ID, LITELLM_URL
@@ -128,4 +128,4 @@ A homelab monitoring setup that pages you for everything is almost as useless as
 
 That layer used to require either a human or a complex rules engine. A local LLM is a better fit: it understands natural language error messages, can reason about likely causes without hardcoded rules, and runs entirely on hardware you already own.
 
-The code is at [github.com/mbonne/localai-bot](https://github.com/mbonne/localai-bot). MIT licensed.
+The code is at [github.com/isithuman-2026/localai-bot](https://github.com/isithuman-2026/localai-bot). MIT licensed.
