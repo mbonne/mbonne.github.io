@@ -7,6 +7,7 @@ last_modified_at: 2026-03-22
 categories: [tooling, networking]
 tags: [ssh, macos, proxy, shell, project]
 slug: "ssh-socks-proxy-macos-script"
+permalink: /ssh-socks-proxy-macos-script/
 canonical_url: "https://buildtestrun.com/ssh-socks-proxy-macos-script"
 schema_type: HowTo
 ---

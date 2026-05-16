@@ -7,6 +7,7 @@ last_modified_at: 2026-04-24
 categories: [homelab, ai]
 tags: [claude, discord, python, mcp, automation, homelab, project]
 slug: "disclaude-on-demand-claude-discord-bot"
+permalink: /disclaude-on-demand-claude-discord-bot/
 canonical_url: "https://buildtestrun.com/disclaude-on-demand-claude-discord-bot"
 schema_type: TechArticle
 ---

@@ -8,13 +8,14 @@ last_modified_at: 2026-04-30
 categories: [homelab, monitoring]
 tags: [prometheus, grafana, loki, monitoring, self-hosted, homelab, observability]
 slug: "homelab-observability-stack"
+permalink: /homelab-observability-stack/
 canonical_url: "https://buildtestrun.com/homelab-observability-stack"
 schema_type: TechArticle
 ---
 
 Running a self-hosted stack across a single server, a NAS, and a UniFi network produces a lot of signals and no shortage of one-off tools that each show you one slice. I wanted a single pane of glass: container health, GPU utilisation under LLM inference load, network traffic, Tailscale mesh health, Claude Code session stats, and security events all in one place.
 
-This is the observability layer that makes that possible. If you want to know how automated alert triage sits on top of it, that is covered in [Local AI Alert Triage: Stop Reading Your Own Monitoring Noise](https://buildtestrun.com/local-ai-alert-triage-bot).
+This is the observability layer that makes that possible. If you want to know how automated alert triage sits on top of it, that is covered in [Local AI Alert Triage: Stop Reading Your Own Monitoring Noise](https://buildtestrun.com/2026-04-24-local-ai-alert-triage-bot/).
 
 ## What I wanted to observe
 
@@ -67,4 +68,4 @@ Panel descriptions across all dashboards were written by Claude Code: each panel
 
 Grafana alert rules watch for fail2ban ban spikes, SSH brute force volume, disk above 85%, container down events, and memory above 90%. Each rule posts to a Discord channel via webhook.
 
-From there, a local LLM bot picks up every alert, pulls the relevant Loki logs, and replies with severity, likely cause, and next step before any human reads it. That setup is covered in [Local AI Alert Triage: Stop Reading Your Own Monitoring Noise](https://buildtestrun.com/local-ai-alert-triage-bot).
+From there, a local LLM bot picks up every alert, pulls the relevant Loki logs, and replies with severity, likely cause, and next step before any human reads it. That setup is covered in [Local AI Alert Triage: Stop Reading Your Own Monitoring Noise](https://buildtestrun.com/2026-04-24-local-ai-alert-triage-bot/).

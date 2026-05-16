@@ -3,11 +3,12 @@ layout: post
 title: "Deploying Claude Safely: A Business Runbook for Data Privacy and Governance"
 subtitle: ""
 description: "A practical runbook for IT leads and business owners rolling out Claude to staff: plan tiers, data handling, admin configuration, usage policy, and MCP supply chain controls."
-date: 2026-05-14
-last_modified_at: 2026-05-14
+date: 2026-05-16
+last_modified_at: 2026-05-16
 categories: [security, ai]
 tags: [security, AI, claude, privacy, governance, enterprise, runbook]
 slug: "deploying-claude-safely-business-runbook"
+permalink: /deploying-claude-safely-business-runbook/
 canonical_url: "https://buildtestrun.com/deploying-claude-safely-business-runbook"
 schema_type: TechArticle
 ---

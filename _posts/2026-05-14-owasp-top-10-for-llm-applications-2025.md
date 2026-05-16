@@ -8,6 +8,7 @@ last_modified_at: 2026-05-14
 categories: [security, ai]
 tags: [security, AI, OWASP, LLM, generative-ai]
 slug: "owasp-top-10-for-llm-applications-2025"
+permalink: /owasp-top-10-for-llm-applications-2025/
 canonical_url: "https://buildtestrun.com/owasp-top-10-for-llm-applications-2025"
 schema_type: TechArticle
 ---

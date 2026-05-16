@@ -7,6 +7,7 @@ last_modified_at: 2026-04-24
 categories: [homelab, ai]
 tags: [python, discord, llm, monitoring, self-hosted, automation, homelab, privacy, project]
 slug: "local-ai-alert-triage-bot"
+permalink: /local-ai-alert-triage-bot/
 canonical_url: "https://buildtestrun.com/local-ai-alert-triage-bot"
 schema_type: TechArticle
 ---

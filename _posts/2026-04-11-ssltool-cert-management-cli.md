@@ -7,6 +7,7 @@ last_modified_at: 2026-04-11
 categories: [tooling, security]
 tags: [ssl, openssl, certificates, pki, shell, macos, project]
 slug: "ssltool-cert-management-cli"
+permalink: /ssltool-cert-management-cli/
 canonical_url: "https://buildtestrun.com/ssltool-cert-management-cli"
 schema_type: HowTo
 ---

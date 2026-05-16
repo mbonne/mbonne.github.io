@@ -7,6 +7,7 @@ last_modified_at: 2026-03-22
 categories: [security, infrastructure]
 tags: [cloudflare, security, github-pages, http-headers]
 slug: "cloudflare-security-headers-static-site"
+permalink: /cloudflare-security-headers-static-site/
 canonical_url: "https://buildtestrun.com/cloudflare-security-headers-static-site"
 schema_type: HowTo
 ---
