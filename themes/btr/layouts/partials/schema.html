@@ -1,0 +1,14 @@
+{{ if and .IsPage (eq .Type "articles") }}
+{{- $desc := or .Description (.Summary | plainify) }}
+{{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" (.Params.schema_type | default "Article")
+    "headline" .Title
+    "description" $desc
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "author" (dict "@type" "Person" "name" .Site.Params.author)
+    "url" .Permalink
+}}
+{{- printf `<script type="application/ld+json">%s</script>` ($schema | jsonify) | safeHTML }}
+{{ end }}

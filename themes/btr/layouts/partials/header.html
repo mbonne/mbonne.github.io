@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="navbar-nav" id="nav-links">
+      {{ range .Site.Menus.main }}
+      <li class="nav-item">
+        <a class="nav-link{{ if or (eq $.RelPermalink .URL) (and (ne $.RelPermalink "/") (hasPrefix $.RelPermalink .URL)) }} active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

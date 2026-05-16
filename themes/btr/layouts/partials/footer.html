@@ -1,0 +1,9 @@
+<footer>
+  <div class="footer-content">
+    <p>
+      {{ with .Site.Params.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      {{ with .Site.Params.github }} &middot; <a href="https://github.com/{{ . }}">GitHub</a>{{ end }}
+    </p>
+    <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
+  </div>
+</footer>

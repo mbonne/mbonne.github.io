@@ -1,0 +1,58 @@
+baseURL = "https://buildtestrun.com"
+title = "Build Test Run"
+locale = "en-au"
+theme = "btr"
+timezone = "Australia/Sydney"
+enableGitInfo = true
+
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date"]
+
+[params]
+  author = "mbonne"
+  email = "mbonne@buildtestrun.com"
+  github = "mbonne"
+  urlPretty = "buildtestrun.com"
+  description = "Homelab, tooling, and systems notes."
+  cfAnalyticsToken = "344acca51469401aa001cb61766c8bf6"
+
+[markup.highlight]
+  noClasses = false
+  codeFences = true
+  lineNos = false
+  tabWidth = 4
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[permalinks]
+  articles = "/:slug/"
+
+[[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+[[menus.main]]
+  name = "Articles"
+  url = "/articles/"
+  weight = 2
+[[menus.main]]
+  name = "AI"
+  url = "/ai/"
+  weight = 3
+[[menus.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 4
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 5
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]

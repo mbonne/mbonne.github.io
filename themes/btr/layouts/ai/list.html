@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="container">
+  <div class="page-content">
+    <h1>{{ .Title }}</h1>
+    {{ $ai_posts := where (where .Site.RegularPages "Type" "articles") "Params.categories" "intersect" (slice "ai") }}
+    {{ if $ai_posts }}
+      {{ range $ai_posts.ByDate.Reverse }}
+      <div class="post-preview">
+        <a href="{{ .RelPermalink }}"><span class="post-title">{{ .Title }}</span></a>
+        <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+    {{ else }}
+    <p class="repos-status">No AI posts yet.</p>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

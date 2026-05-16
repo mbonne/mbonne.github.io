@@ -1,21 +1,17 @@
-# project
-_site
-.sass-cache
-.vagrant
+# Hugo build output
+public/
+resources/
+.hugo_build.lock
 
-# general
+# macOS / editors
 .DS_Store
 Thumbs.db
-ehthumbs.db
 
-Gemfile.lock
-
-beautiful-jekyll-theme-*.gem
-
-.worktrees/
-
-# Claude Code tooling — keep off public repo
+# Claude Code tooling — not committed
 CLAUDE.md
 docs/
 .claude/
 _drafts/
+
+# Worktrees
+.worktrees/

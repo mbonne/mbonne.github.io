@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="container">
+  <div class="page-content">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <h2>Project Posts</h2>
+    {{ $project_posts := where (where .Site.RegularPages "Type" "articles") "Params.tags" "intersect" (slice "project") }}
+    {{ if $project_posts }}
+      {{ range $project_posts.ByDate.Reverse }}
+      <div class="post-preview">
+        <a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong></a>
+        <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+    {{ else }}
+    <p class="repos-status">No project posts yet.</p>
+    {{ end }}
+  </div>
+</div>
+<script defer src="/assets/js/github-repos.js"></script>
+{{ end }}

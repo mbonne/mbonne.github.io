@@ -1,0 +1,420 @@
+/* ── Base reset + CSS variables ────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --body-font: "CaskaydiaCove NF", "Cascadia Code", monospace;
+  --bg:        #282a36;
+  --bg-alt:    #1e1f29;
+  --line:      #44475a;
+  --fg:        #f8f8f2;
+  --muted:     #6272a4;
+  --purple:    #bd93f9;
+  --green:     #50fa7b;
+  --orange:    #ffb86c;
+  --red:       #ff5555;
+  --yellow:    #f1fa8c;
+  --pink:      #ff79c6;
+  --cyan:      #8be9fd;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ── Links ──────────────────────────────────────────────────────────── */
+a { color: var(--purple); }
+a:hover { color: var(--green); }
+
+/* ── Headings ───────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 { color: var(--fg); }
+
+/* ── Container ──────────────────────────────────────────────────────── */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────────────── */
+.navbar {
+  background-color: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.nav-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.navbar-brand {
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.navbar-brand:hover { color: var(--green); }
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav-item { list-style: none; }
+
+.nav-link {
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.15s;
+}
+
+.nav-link:hover { color: var(--green); }
+.nav-link.active { color: var(--green); font-weight: 600; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--fg);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+@media (max-width: 640px) {
+  .nav-toggle { display: block; }
+  .navbar-nav {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    padding: 0.75rem 1.5rem;
+    gap: 0.75rem;
+    z-index: 499;
+  }
+  .navbar-nav.open { display: flex; }
+}
+
+/* ── Main content ───────────────────────────────────────────────────── */
+main { padding: 2rem 0 4rem; }
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+footer {
+  background-color: var(--bg-alt);
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer-content p { margin: 0.2rem 0; }
+
+.footer-content a {
+  color: var(--fg);
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+
+.footer-content a:hover { color: var(--purple); }
+
+/* ── Fonts ──────────────────────────────────────────────────────────── */
+code, pre, kbd, samp {
+  font-family: "CaskaydiaMono NF", "Cascadia Mono", monospace;
+}
+
+/* ── Inline code ────────────────────────────────────────────────────── */
+code {
+  background-color: var(--line);
+  color: var(--fg);
+  border: none;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* ── Code blocks ────────────────────────────────────────────────────── */
+pre {
+  position: relative;
+  background-color: var(--line);
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+pre code {
+  background-color: transparent;
+  color: var(--fg);
+  padding: 0;
+}
+
+/* Chroma wrapper (Hugo syntax highlighting) */
+.chroma {
+  background-color: var(--line);
+  border-radius: 4px;
+}
+
+/* ── Copy button ────────────────────────────────────────────────────── */
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: var(--muted);
+  color: var(--fg);
+  border: none;
+  border-radius: 3px;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+  font-family: inherit;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+pre:hover .copy-btn { opacity: 1; }
+.copy-btn:hover { background: var(--purple); color: var(--bg); }
+
+/* ── Article heading colours ────────────────────────────────────────── */
+.blog-post h1 { color: var(--purple); }
+.blog-post h2 { color: var(--orange); }
+.blog-post h3 { color: var(--green); }
+.blog-post h4 { color: var(--red); }
+.blog-post h5 { color: var(--yellow); }
+
+/* ── Page heading colours ───────────────────────────────────────────── */
+.page-content h1 { color: var(--purple); }
+.page-content h2 { color: var(--orange); }
+.page-content h3 { color: var(--green); }
+.page-content h4 { color: var(--red); }
+.page-content h5 { color: var(--yellow); }
+
+/* ── Post single — standalone title ────────────────────────────────── */
+.post-title-heading { color: var(--purple); }
+.post-subtitle { color: var(--muted); margin-top: -0.5rem; font-size: 1rem; }
+
+/* ── Responsive images ──────────────────────────────────────────────── */
+.blog-post img { max-width: 100%; height: auto; display: block; }
+
+/* ── Captioned image figure ─────────────────────────────────────────── */
+.post-figure { margin: 1.5rem 0; }
+.post-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+.post-figure figcaption {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* ── Post list / preview cards ──────────────────────────────────────── */
+.post-preview {
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem 0;
+}
+
+.post-preview .post-title {
+  color: var(--purple);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.post-preview a { text-decoration: none; }
+.post-preview a:hover .post-title { color: var(--green); }
+.post-preview a:hover strong { color: var(--green); }
+
+.post-meta { color: var(--muted); font-size: 0.85rem; margin: 0.2rem 0 0.3rem; }
+
+/* ── Tag labels ─────────────────────────────────────────────────────── */
+.blog-tags a {
+  display: inline-block;
+  background-color: var(--line);
+  color: var(--purple);
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin: 0 2px;
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+.blog-tags a:hover { background-color: var(--muted); color: var(--fg); }
+
+/* ── Blockquotes ────────────────────────────────────────────────────── */
+blockquote {
+  background-color: var(--line);
+  border-left: 4px solid var(--purple);
+  color: var(--fg);
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+/* ── Tables ─────────────────────────────────────────────────────────── */
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+table th, table td { border: 1px solid var(--line); padding: 8px 12px; }
+table th { background-color: var(--line); color: var(--fg); }
+table tr:nth-child(even) { background-color: #313342; }
+
+/* ── Horizontal rules ───────────────────────────────────────────────── */
+hr { border-color: var(--line); }
+
+/* ── Floating TOC sidebar ───────────────────────────────────────────── */
+.post-toc {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  width: 210px;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-size: 0.78rem;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  z-index: 200;
+  display: none;
+}
+
+@media (min-width: 1400px) { .post-toc { display: block; } }
+
+.toc-label {
+  color: var(--muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.post-toc ul { list-style: none; padding: 0; margin: 0; }
+.post-toc ul li a {
+  color: var(--muted);
+  text-decoration: none;
+  display: block;
+  padding: 2px 0;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+.post-toc ul li a:hover,
+.post-toc ul li a.toc-active { color: var(--green); }
+.toc-h1, .toc-h2 { padding-left: 0; }
+.toc-h3 { padding-left: 10px; }
+.toc-h4 { padding-left: 20px; }
+.toc-h5 { padding-left: 30px; }
+
+/* ── Mobile inline TOC ──────────────────────────────────────────────── */
+.post-toc-inline {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 10px 14px;
+  margin-bottom: 24px;
+  font-size: 0.78rem;
+}
+.post-toc-inline summary {
+  color: var(--muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+.post-toc-inline summary::-webkit-details-marker,
+.post-toc-inline summary::marker { display: none; }
+.post-toc-inline ul { list-style: none; padding: 0; margin: 8px 0 0 0; }
+.post-toc-inline ul li a {
+  color: var(--muted);
+  text-decoration: none;
+  display: block;
+  padding: 2px 0;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+.post-toc-inline ul li a:hover,
+.post-toc-inline ul li a.toc-active { color: var(--green); }
+.post-toc-inline .toc-h3 { padding-left: 10px; }
+.post-toc-inline .toc-h4 { padding-left: 20px; }
+.post-toc-inline .toc-h5 { padding-left: 30px; }
+.post-toc-inline .toc-label { display: none; }
+
+@media (min-width: 1400px) { .post-toc-inline { display: none; } }
+
+/* ── Back-to-top button ─────────────────────────────────────────────── */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 47px;
+  height: 47px;
+  background: var(--bg);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, color 0.15s;
+  color: var(--fg);
+  z-index: 999;
+  padding: 0;
+  box-shadow: 0 0 0 1px var(--line);
+}
+#back-to-top.btt-visible { opacity: 1; visibility: visible; }
+#back-to-top:hover { color: var(--green); }
+#back-to-top:hover .btt-progress { stroke: var(--green); transition: stroke 0.15s; }
+.btt-ring { position: absolute; top: 0; left: 0; }
+.btt-arrow { position: relative; z-index: 1; }
+
+/* ── GitHub repo cards (projects page) ──────────────────────────────── */
+.repo-card {
+  background-color: var(--line);
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.15s;
+}
+.repo-card:hover { border-color: var(--purple); }
+.repo-name { color: var(--purple); font-weight: 600; text-decoration: none; font-size: 1rem; }
+.repo-name:hover { color: var(--green); text-decoration: none; }
+.repo-description { color: var(--fg); margin: 0.4rem 0 0.6rem; font-size: 0.9rem; }
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  align-items: center;
+}
+.repo-language { display: flex; align-items: center; gap: 0.3rem; }
+.repo-lang-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; }
+.repos-status { color: var(--muted); }
