@@ -418,3 +418,5 @@ hr { border-color: var(--line); }
 .repo-language { display: flex; align-items: center; gap: 0.3rem; }
 .repo-lang-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; }
 .repos-status { color: var(--muted); }
+
+.avatar { width: 120px; height: 120px; border-radius: 50%; margin-bottom: 1.5rem; display: block; }
