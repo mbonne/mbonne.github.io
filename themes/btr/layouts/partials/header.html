@@ -5,7 +5,7 @@
     <ul class="navbar-nav" id="nav-links">
       {{ range .Site.Menus.main }}
       <li class="nav-item">
-        <a class="nav-link{{ if or (eq $.RelPermalink .URL) (and (ne $.RelPermalink "/") (hasPrefix $.RelPermalink .URL)) }} active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+        <a class="nav-link{{ if or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }} active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
       </li>
       {{ end }}
     </ul>
