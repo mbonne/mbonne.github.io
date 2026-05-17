@@ -10,7 +10,7 @@ enableGitInfo = true
 
 [params]
   author = "mbonne"
-  email = "mbonne@buildtestrun.com"
+  email = "contact@buildtestrun.com"
   github = "mbonne"
   urlPretty = "buildtestrun.com"
   description = "Homelab, tooling, and systems notes."
