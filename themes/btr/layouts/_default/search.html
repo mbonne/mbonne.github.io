@@ -8,12 +8,6 @@
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="/pagefind/pagefind-ui.js" data-cfasync="false"></script>
 <script data-cfasync="false">
-  window.addEventListener("DOMContentLoaded", function () {
-    new PagefindUI({
-      element: "#search",
-      showSubResults: true,
-      highlightParam: "highlight"
-    });
-  });
+  new PagefindUI({ element: "#search", showSubResults: true, highlightParam: "highlight" });
 </script>
 {{ end }}
