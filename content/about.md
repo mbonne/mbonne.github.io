@@ -5,9 +5,9 @@ url: "/about/"
 
 <a href="https://github.com/mbonne?tab=repositories"><img src="https://github.com/mbonne.png" alt="mbonne" class="avatar"></a>
 
-Started at the bottom of the stack and worked up. Career spans hardware repair, helpdesk, infrastructure, networking, project delivery, scripting, and automation. Now in an operations leadership role at an MSP. It shapes how I approach tooling and operational decisions.
+IT Service Operations Manager at an MSP, with a background that runs from hardware repair and helpdesk through to infrastructure, networking, project delivery, and automation. That breadth tends to show up in how I think about tooling and operational decisions.
 
-**Currently:** IT Service Operations Manager, overseeing service delivery at an MSP. Outside of work, the homelab runs experiments across automation, virtualisation, container orchestration, and various attempts to integrate AI agents before they integrate us.
+Outside of work, the homelab runs experiments across automation, virtualisation, container orchestration, and various attempts to integrate AI agents before they integrate us.
 
 [GitHub](https://github.com/mbonne)
 
