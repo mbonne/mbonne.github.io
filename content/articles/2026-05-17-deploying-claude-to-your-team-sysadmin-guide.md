@@ -196,7 +196,7 @@ Claude Desktop is the GUI application for chat, cowork, and productivity. It tar
 
 #### Windows
 
-**Standard install:** Download from [claude.ai/download](https://claude.ai/download). Requires Windows 10 or later.
+**Standard install:** Download from [claude.ai/download](https://claude.ai/download). Requires Windows 10 or later. But your devices are on Windows 11 Pro at minimum, right.
 
 **MDM/GPO deployment (Intune, SCCM):**
 - Package and distribute via Intune (MSIX or EXE wrapper) or SCCM
