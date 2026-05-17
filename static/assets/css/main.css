@@ -347,6 +347,28 @@ pre:hover .copy-btn { opacity: 1; }
 
 .all-articles-link { margin-top: 2rem; text-align: center; }
 
+/* ── Topic filter ───────────────────────────────────────────────────── */
+.topic-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+.topic-btn {
+  padding: 0.3rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: none;
+  color: var(--muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: var(--body-font);
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  text-transform: capitalize;
+}
+.topic-btn:hover { border-color: var(--purple); color: var(--purple); }
+.topic-btn.active { border-color: var(--purple); background: var(--purple); color: var(--bg); }
+
 .btn-outline {
   display: inline-block;
   padding: 0.45rem 1.2rem;

@@ -2,13 +2,35 @@
 <div class="container">
   <div class="page-content">
     <h1>{{ .Title }}</h1>
-    {{ range .Pages.ByDate.Reverse }}
-    <div class="post-preview">
-      <a href="{{ .RelPermalink }}"><span class="post-title">{{ .Title }}</span></a>
-      <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
-      {{ with .Description }}<p>{{ . }}</p>{{ end }}
-    </div>
+
+    {{/* Collect unique categories sorted alphabetically */}}
+    {{ $cats := slice }}
+    {{ range .Pages }}
+      {{ range .Params.categories }}
+        {{ $cats = $cats | append . }}
+      {{ end }}
     {{ end }}
+    {{ $cats = $cats | uniq | sort }}
+
+    <div class="topic-filter" id="topic-filter">
+      <button class="topic-btn active" data-cat="all">All</button>
+      {{ range $cats }}
+      <button class="topic-btn" data-cat="{{ . }}">{{ . }}</button>
+      {{ end }}
+    </div>
+
+    <div id="articles-list">
+      {{ range .Pages.ByDate.Reverse }}
+      {{ $catStr := delimit .Params.categories "," }}
+      <div class="post-preview" data-categories="{{ $catStr }}">
+        <a href="{{ .RelPermalink }}"><span class="post-title">{{ .Title }}</span></a>
+        <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+
   </div>
 </div>
+<script defer src="/assets/js/topic-filter.js"></script>
 {{ end }}
