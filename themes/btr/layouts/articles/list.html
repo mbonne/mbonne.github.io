@@ -21,7 +21,7 @@
 
     <div id="articles-list">
       {{ range .Pages.ByDate.Reverse }}
-      {{ $catStr := delimit .Params.categories "," }}
+      {{ $catStr := delimit (.Params.categories | default slice) "," }}
       <div class="post-preview" data-categories="{{ $catStr }}">
         <a href="{{ .RelPermalink }}"><span class="post-title">{{ .Title }}</span></a>
         <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
