@@ -84,7 +84,10 @@
   color-scheme: dark;
 }
 
-html { overflow-x: clip; }
+html {
+  overflow-x: clip;
+  min-height: 100%;
+}
 
 body {
   font-family: var(--body-font);
@@ -94,7 +97,11 @@ body {
   line-height: 1.6;
   font-size: 1rem;
   overflow-x: clip;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 
 /* ── Links ──────────────────────────────────────────────────────────── */
 a { color: var(--purple); }
@@ -188,7 +195,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--fg); }
 }
 
 /* ── Main content ───────────────────────────────────────────────────── */
-main { padding: 2rem 0 4rem; }
+main { flex: 1; padding: 2rem 0 4rem; }
 
 /* ── Footer ─────────────────────────────────────────────────────────── */
 footer {
