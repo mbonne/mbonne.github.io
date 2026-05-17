@@ -5,5 +5,7 @@
       {{ with .Site.Params.github }} &middot; <a href="https://github.com/{{ . }}">GitHub</a>{{ end }}
     </p>
     <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
+    <p class="footer-ip-line"><span id="visitor-ip" style="display:none"></span></p>
   </div>
 </footer>
+<script defer src="/assets/js/visitor-ip.js"></script>
