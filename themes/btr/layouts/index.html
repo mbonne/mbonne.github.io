@@ -2,13 +2,16 @@
 <div class="container">
   {{ with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
   <section>
-    {{ range (where .Site.RegularPages "Type" "articles").ByDate.Reverse }}
+    {{ range first 6 (where .Site.RegularPages "Type" "articles").ByDate.Reverse }}
     <div class="post-preview">
       <a href="{{ .RelPermalink }}"><span class="post-title">{{ .Title }}</span></a>
       <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
       {{ with .Description }}<p>{{ . }}</p>{{ end }}
     </div>
     {{ end }}
+    <div class="all-articles-link">
+      <a href="/articles/" class="btn-outline">All Articles →</a>
+    </div>
   </section>
 </div>
 {{ end }}

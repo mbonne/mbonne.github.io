@@ -256,6 +256,20 @@ pre:hover .copy-btn { opacity: 1; }
 
 .post-meta { color: var(--muted); font-size: 0.85rem; margin: 0.2rem 0 0.3rem; }
 
+.all-articles-link { margin-top: 2rem; text-align: center; }
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.45rem 1.2rem;
+  border: 1px solid var(--purple);
+  color: var(--purple);
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-outline:hover { background: var(--purple); color: var(--bg); }
+
 /* ── Tag labels ─────────────────────────────────────────────────────── */
 .blog-tags a {
   display: inline-block;
