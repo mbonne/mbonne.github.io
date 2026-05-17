@@ -70,17 +70,26 @@ function buildTOC() {
     }, 150);
   });
 
-  /* Scroll-spy: highlight active section */
+  /* Scroll-spy: highlight active section and keep it visible in TOC */
   var tocLinks = nav.querySelectorAll("a");
+  var lastActive = null;
   window.addEventListener("scroll", function () {
     var scrollY = window.scrollY + 120;
     var active = null;
     headings.forEach(function (h) {
       if (h.offsetTop <= scrollY) active = h.id;
     });
+    if (active === lastActive) return;
+    lastActive = active;
+    var activeLink = null;
     tocLinks.forEach(function (a) {
-      a.classList.toggle("toc-active", a.getAttribute("href") === "#" + active);
+      var isActive = a.getAttribute("href") === "#" + active;
+      a.classList.toggle("toc-active", isActive);
+      if (isActive) activeLink = a;
     });
+    if (activeLink && nav.classList.contains("post-toc")) {
+      activeLink.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
   });
 }
 
