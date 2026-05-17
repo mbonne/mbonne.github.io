@@ -42,5 +42,26 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  /* On narrow screens the footer scrolls normally — push button up when footer enters view */
+  var footer = document.querySelector('footer');
+  if (footer && window.IntersectionObserver) {
+    var thresholds = [];
+    for (var i = 0; i <= 100; i++) { thresholds.push(i / 100); }
+    var footerObserver = new IntersectionObserver(function (entries) {
+      var entry = entries[0];
+      if (window.innerWidth >= 768) { btn.style.bottom = ''; return; }
+      if (entry.isIntersecting) {
+        var footerVisible = window.innerHeight - entry.boundingClientRect.top;
+        btn.style.bottom = Math.max(footerVisible + 12, 32) + 'px';
+      } else {
+        btn.style.bottom = '';
+      }
+    }, { threshold: thresholds });
+    footerObserver.observe(footer);
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 768) { btn.style.bottom = ''; }
+    });
+  }
+
   update();
 }());
