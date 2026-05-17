@@ -137,6 +137,7 @@ footer {
     z-index: 100;
   }
   main { padding-bottom: 8rem; }
+  #back-to-top { bottom: 9rem; }
 }
 
 .footer-content {
