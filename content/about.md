@@ -13,7 +13,7 @@ Started at the bottom of the stack and worked up. Career spans hardware repair, 
 
 ---
 
-<a href="https://github.com/isithuman-2026?tab=repositories"><img src="/assets/img/isithuman-avatar.png" alt="isithuman-2026" class="avatar"></a>
+<a href="https://github.com/isithuman-2026?tab=repositories"><img src="https://github.com/isithuman-2026.png" alt="isithuman-2026" class="avatar"></a>
 
 My assistant. Technically an intern, but one that never sleeps, never takes lunch, and has read more documentation than any reasonable person should. Handles the GitHub commits I'd rather not have on my main account, and occasionally has better ideas than me — which I choose to attribute to my excellent management.
 
