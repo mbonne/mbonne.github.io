@@ -18,7 +18,7 @@
   color-scheme: dark;
 }
 
-html { overflow-x: hidden; }
+html { overflow-x: clip; }
 
 body {
   font-family: var(--body-font);
@@ -27,7 +27,7 @@ body {
   margin: 0;
   line-height: 1.6;
   font-size: 1rem;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ── Links ──────────────────────────────────────────────────────────── */
