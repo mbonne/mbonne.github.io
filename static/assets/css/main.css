@@ -1,3 +1,69 @@
+/* ── Fonts ──────────────────────────────────────────────────────────── */
+@font-face {
+    font-display: swap;
+    font-family: "CaskaydiaCove NF";
+    src: local("CaskaydiaCoveNerdFont-Regular"),
+         url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/fonts/CaskaydiaCoveNerdFont-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-display: swap;
+    font-family: "CaskaydiaCove NF";
+    src: local("CaskaydiaCoveNerdFont-Italic"),
+         url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/fonts/CaskaydiaCoveNerdFont-Italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-display: swap;
+    font-family: "CaskaydiaCove NF";
+    src: local("CaskaydiaCoveNerdFont-Bold"),
+         url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/fonts/CaskaydiaCoveNerdFont-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-display: swap;
+    font-family: "CaskaydiaCove NF";
+    src: local("CaskaydiaCoveNerdFont-BoldItalic"),
+         url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/fonts/CaskaydiaCoveNerdFont-BoldItalic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+    font-display: swap;
+    font-family: "CaskaydiaMono NF";
+    src: local("CaskaydiaMonoNerdFont-Regular"),
+         url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/fonts/CaskaydiaMonoNerdFont-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-display: swap;
+    font-family: "CaskaydiaMono NF";
+    src: local("CaskaydiaMonoNerdFont-Italic"),
+         url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/fonts/CaskaydiaMonoNerdFont-Italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-display: swap;
+    font-family: "CaskaydiaMono NF";
+    src: local("CaskaydiaMonoNerdFont-Bold"),
+         url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/fonts/CaskaydiaMonoNerdFont-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-display: swap;
+    font-family: "CaskaydiaMono NF";
+    src: local("CaskaydiaMonoNerdFont-BoldItalic"),
+         url("https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts@v3.3.0/build/fonts/CaskaydiaMonoNerdFont-BoldItalic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 700;
+}
+
 /* ── Base reset + CSS variables ────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
