@@ -18,6 +18,8 @@
   color-scheme: dark;
 }
 
+html { overflow-x: hidden; }
+
 body {
   font-family: var(--body-font);
   background-color: var(--bg);
@@ -25,6 +27,7 @@ body {
   margin: 0;
   line-height: 1.6;
   font-size: 1rem;
+  overflow-x: hidden;
 }
 
 /* ── Links ──────────────────────────────────────────────────────────── */
@@ -39,6 +42,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--fg); }
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  overflow-wrap: break-word;
 }
 
 /* ── Navbar ─────────────────────────────────────────────────────────── */
