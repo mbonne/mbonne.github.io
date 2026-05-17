@@ -11,7 +11,7 @@ canonical_url: "https://buildtestrun.com/deploying-claude-safely-business-runboo
 schema_type: TechArticle
 ---
 
-> **Who this is for:** IT leads, operations managers, and business owners preparing to roll out Claude (claude.ai, Claude Code, or the API) to staff. This is a practical runbook, not legal advice. Involve your legal and compliance teams for obligations specific to your industry.
+> **Who this is for:** IT leads, operations managers, and business owners preparing to roll out Claude (claude.ai, Claude Code, or the API) to staff. This is a practical runbook, not legal advice. Involve your legal and compliance teams for obligations specific to your industry. Once decisions are made, see [Part 2: Deploying Claude to Your Team -- A Sysadmin Checklist](https://buildtestrun.com/deploying-claude-to-your-team-sysadmin-guide) for the technical execution guide.
 
 ---
 
