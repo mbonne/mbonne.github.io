@@ -115,5 +115,17 @@ function placeTOC(nav, blogPost) {
     details.appendChild(summary);
     details.appendChild(nav);
     blogPost.insertBefore(details, blogPost.firstChild);
+
+    nav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        var targetId = a.getAttribute("href").slice(1);
+        details.open = false;
+        setTimeout(function () {
+          var target = document.getElementById(targetId);
+          if (target) { target.scrollIntoView({ behavior: "smooth", block: "start" }); }
+        }, 50);
+      });
+    });
   }
 }
