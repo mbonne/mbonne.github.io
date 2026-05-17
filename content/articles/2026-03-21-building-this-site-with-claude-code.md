@@ -2,7 +2,7 @@
 
 title: "Building This Site With Claude Code"
 subtitle: "Transparent about the tooling from day one"
-description: "How buildtestrun.com was built and maintained using Claude Code, with an Obsidian-based content pipeline and Beautiful Jekyll theme."
+description: "How buildtestrun.com was built and maintained using Claude Code, with an Obsidian-based content pipeline and a custom Hugo theme."
 date: 2026-03-21
 lastmod: 2026-03-21
 tags: [meta, claude, obsidian, tooling]
@@ -17,11 +17,11 @@ Over time I'll be making posts which use notes from my Obsidian vault. Often it'
 
 ## What it is
 
-Build Test Run runs on [Beautiful Jekyll](https://beautifuljekyll.com), a GitHub Pages-compatible theme originally created by Dean Attali. The visual foundation, dark theme, layout, post structure, comes from that base, adapted to a Dracula colour palette and stripped of anything that is not needed.
+Build Test Run runs on Hugo with a custom theme called `btr`. There is no external theme dependency. The visual foundation is a Dracula colour palette implemented from scratch: dark background, purple links, syntax highlighting via Chroma, and a layout stripped of anything not needed.
 
 The content pipeline is purpose-built: notes live in an Obsidian vault, and a Claude Code workflow pulls from that vault to draft articles. The workflow browses the vault, selects relevant material, and produces a structured post draft for review before anything goes public. Nothing is published raw.
 
-Claude Code also handled the initial setup: `_config.yml`, CSS overrides, `.gitignore`, About page, the whole thing. Not generated once and left alone. It is an active part of how the site gets maintained.
+Claude Code also handled the initial setup: `hugo.toml`, CSS, `.gitignore`, About page, the whole thing. Not generated once and left alone. It is an active part of how the site gets maintained.
 
 ## Why be transparent about it
 
@@ -35,7 +35,7 @@ Notes in the vault do not go straight to the site. The workflow is:
 
 1. Draft is generated from vault content using a Claude Code custom command
 2. Draft lands in `_drafts/` - never committed, never public
-3. Review and edit before it moves to `_posts/`
+3. Review and edit before it moves to `content/articles/`
 4. Commit and push triggers the GitHub Pages build
 
 The goal is to reduce friction from "I have something worth writing about" to "there is a readable draft in front of me" without sacrificing editorial control. It is working.

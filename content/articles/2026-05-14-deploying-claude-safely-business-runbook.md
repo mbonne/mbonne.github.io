@@ -18,7 +18,7 @@ schema_type: TechArticle
 ## TL;DR
 
 - **Free and Pro plans**: your conversations can be used to train Anthropic's models by default. You can opt out, but you have to do it manually.
-- **Team and Enterprise plans**: training on your data is off by default. Enterprise adds admin controls, SSO, and data retention settings.
+- **Team and Enterprise plans**: training on your data is off by default. Team adds admin controls and SSO. Enterprise adds data retention settings, audit logging, and expanded context.
 - **API and Claude Code**: no training by default. Zero data retention is available on request.
 - Anthropic employees can access conversation data for safety and trust purposes -- it is not fully siloed from human review at any tier.
 - The highest risk for businesses is staff pasting confidential data (client lists, credentials, contracts, PII) into the wrong plan tier before controls are in place.
@@ -59,12 +59,13 @@ The Team plan is designed for business use. Key differences from Free/Pro:
 
 - **Training on your conversations is off by default.** You do not need to opt out individually.
 - Admin controls for the workspace are available -- admins can manage members and billing centrally.
+- **SSO/SAML** -- integrate with your existing identity provider (Entra ID, Okta, etc.).
 - 200K context window per user.
 - Usage is still subject to Anthropic's trust and safety review (see Section 3).
 
 This is the minimum recommended tier for any business use involving internal data.
 
-Reference: [Claude Team](https://www.anthropic.com/claude/team)
+Reference: [Claude Team](https://claude.com/pricing/team)
 
 ### Claude.ai -- Enterprise
 
@@ -124,7 +125,7 @@ Anthropic's privacy policy and trust documentation state that:
 
 If your business handles data that cannot be disclosed to a third party under any circumstances -- attorney-client privileged communications, certain health records, classified government information -- do not put it in Claude regardless of tier.
 
-Reference: [Anthropic Trust & Safety](https://www.anthropic.com/trust)
+Reference: [Anthropic Trust & Safety](https://trust.anthropic.com/)
 
 ---
 
@@ -148,20 +149,25 @@ The risk is compounded on Free and Pro plans where training opt-out may not be s
 
 Before rolling Claude out to staff, work through this checklist. It is structured so you can assign owners and track completion.
 
+> **Note:** This is not an exhaustive list. Every environment is different -- review each item for relevance to your organisation's size, industry, regulatory context, and existing tooling. Skip items that do not apply, and add controls specific to your situation.
+
 ### Step 1 -- Choose the Right Plan
+
+Anthropic's [pricing page](https://claude.com/pricing#team-&-enterprise) includes a plan quiz to help identify the right tier for your use case.
 
 | Scenario | Recommended Tier |
 |---|---|
 | Individual staff productivity, no sensitive data | Pro (with opt-out enforced) |
 | Team collaboration, internal data | Team minimum |
-| Regulated data, SSO, audit trail needed | Enterprise |
+| Regulated data, SSO needed | Team minimum |
+| Regulated data, audit trail, data retention controls, 500K context | Enterprise |
 | Developers building on Claude / Claude Code | API with zero retention if available |
 
 ### Step 2 -- Configure Admin Controls
 
 **For Team/Enterprise:**
 - [ ] Set up the workspace and verify your domain
-- [ ] Integrate SSO (Entra ID/Okta) -- prevents staff using personal accounts
+- [ ] Integrate SSO (Entra ID/Okta) -- available on Team and Enterprise, prevents staff using personal accounts
 - [ ] Review default data retention settings
 - [ ] Enable audit logging if available on your tier
 - [ ] Assign admin roles -- at minimum one primary and one backup admin
@@ -188,7 +194,7 @@ Keep the policy short and practical. A five-page document no one reads is worse 
 
 ### Step 4 -- Identity and Access
 
-- [ ] Staff must use work accounts, not personal accounts -- SSO enforces this on Enterprise
+- [ ] Staff must use work accounts, not personal accounts -- SSO enforces this on Team and Enterprise
 - [ ] Personal use of Claude (personal accounts) is at their own risk and outside your policy's scope -- be explicit about this
 - [ ] Offboarding process: remove staff from the Claude workspace on the same day as other system access
 
@@ -297,7 +303,7 @@ Deploying Claude is an ongoing commitment, not a one-time configuration. The fol
 
 Anthropic is a US company. Your data, depending on tier and configuration, may be processed on US infrastructure. If you operate under GDPR, the Australian Privacy Act, HIPAA, or other frameworks, you need to assess this with legal counsel before deploying Claude to process personal data.
 
-Anthropic publishes information about their data sub-processors and international transfer mechanisms. Review their privacy policy and, for Enterprise customers, the Data Processing Agreement (DPA) they offer.
+Anthropic publishes information about their data sub-processors and international transfer mechanisms. Review their privacy policy and, for Enterprise customers, the Data Processing Agreement (DPA) they offer. Anthropic also maintains a [regional compliance page](https://claude.com/regional-compliance) covering jurisdiction-specific considerations.
 
 Reference: [Anthropic Privacy Policy](https://www.anthropic.com/privacy)
 
@@ -310,7 +316,7 @@ If you are reading this and your staff are already using Claude without controls
 1. **Today**: send staff a note -- do not paste client data, credentials, or confidential information into Claude until IT has configured it.
 2. **This week**: decide on your plan tier. If Team or Enterprise is in scope, start the procurement process.
 3. **This week**: draft a one-page usage policy. It does not need to be perfect -- it needs to exist.
-4. **Next two weeks**: configure SSO if on Enterprise, set up API key management if developers are using Claude Code, establish the MCP approved list.
+4. **Next two weeks**: configure SSO if on Team or Enterprise, set up API key management if developers are using Claude Code, establish the MCP approved list.
 5. **Before full rollout**: brief team leads, add the policy to onboarding, set up API spend alerts.
 
 ---
@@ -318,10 +324,11 @@ If you are reading this and your staff are already using Claude without controls
 ## References
 
 - [Anthropic Privacy Policy](https://www.anthropic.com/privacy)
-- [Anthropic Trust & Safety](https://www.anthropic.com/trust)
+- [Anthropic Trust & Safety](https://trust.anthropic.com/)
 - [Claude Enterprise](https://www.anthropic.com/enterprise)
-- [Claude Team](https://www.anthropic.com/claude/team)
+- [Claude Team](https://claude.com/pricing/team)
 - [Anthropic API Data Retention FAQ](https://support.anthropic.com/en/articles/7996866-how-long-does-anthropic-retain-my-api-data)
 - [Anthropic Usage Policy](https://www.anthropic.com/legal/aup)
+- [Anthropic Regional Compliance](https://claude.com/regional-compliance)
 - [Model Context Protocol (MCP) -- Anthropic](https://www.anthropic.com/news/model-context-protocol)
 - [OWASP Top 10 for LLM Applications 2025](https://buildtestrun.com/owasp-top-10-for-llm-applications-2025) -- companion post
