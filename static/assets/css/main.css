@@ -288,7 +288,12 @@ pre:hover .copy-btn { opacity: 1; }
 .blog-post h4 { color: var(--red); }
 .blog-post h5 { color: var(--yellow); }
 .blog-post h1, .blog-post h2, .blog-post h3,
-.blog-post h4, .blog-post h5 { scroll-margin-top: 70px; }
+.blog-post h4, .blog-post h5 { scroll-margin-top: 100px; }
+
+@media (min-width: 1400px) {
+  .blog-post h1, .blog-post h2, .blog-post h3,
+  .blog-post h4, .blog-post h5 { scroll-margin-top: 70px; }
+}
 .blog-post strong { color: var(--orange); }
 .blog-post em     { color: var(--yellow); }
 
@@ -389,6 +394,7 @@ hr { border-color: var(--line); }
 .post-toc {
   position: fixed;
   top: 90px;
+  bottom: 130px;
   left: 20px;
   width: 210px;
   background: var(--bg-alt);
@@ -396,7 +402,6 @@ hr { border-color: var(--line); }
   border-radius: 4px;
   padding: 12px 14px;
   font-size: 0.78rem;
-  max-height: calc(100vh - 120px);
   overflow-y: auto;
   z-index: 200;
   display: none;
