@@ -1,7 +1,6 @@
 {{ define "main" }}
 <div class="container">
   <div class="page-content">
-    <h1>Search</h1>
     <div id="search"></div>
   </div>
 </div>
@@ -20,7 +19,34 @@
     --pagefind-ui-image-border-radius: 4px;
   }
   .pagefind-ui__result-excerpt mark { background: #f1fa8c; color: #282a36; }
-  .pagefind-ui__search-input { color: #f8f8f2; }
+  .pagefind-ui__search-input {
+    color: #f8f8f2 !important;
+    background: #282a36 !important;
+    border: 1px solid #44475a !important;
+    border-radius: 4px !important;
+    font-family: "CaskaydiaCove NF", "Cascadia Code", monospace !important;
+    font-size: 0.9rem !important;
+  }
+  .pagefind-ui__search-input:focus {
+    outline: none !important;
+    border-color: #bd93f9 !important;
+  }
+  .pagefind-ui__search-clear {
+    color: #6272a4 !important;
+  }
+  .pagefind-ui__search-clear:hover { color: #f8f8f2 !important; }
+  .pagefind-ui__button {
+    border: 1px solid #bd93f9 !important;
+    background: none !important;
+    color: #bd93f9 !important;
+    border-radius: 4px !important;
+    font-family: "CaskaydiaCove NF", "Cascadia Code", monospace !important;
+    font-size: 0.9rem !important;
+    padding: 0.45rem 1.2rem !important;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .pagefind-ui__button:hover { background: #bd93f9 !important; color: #282a36 !important; }
 </style>
 <script src="/pagefind/pagefind-ui.js" data-cfasync="false"></script>
 <script data-cfasync="false">
