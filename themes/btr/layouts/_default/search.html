@@ -6,6 +6,22 @@
   </div>
 </div>
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<style>
+  #search {
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-font: "CaskaydiaCove NF", "Cascadia Code", monospace;
+    --pagefind-ui-primary: #bd93f9;
+    --pagefind-ui-text: #f8f8f2;
+    --pagefind-ui-background: #282a36;
+    --pagefind-ui-border: #44475a;
+    --pagefind-ui-tag: #44475a;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 4px;
+    --pagefind-ui-image-border-radius: 4px;
+  }
+  .pagefind-ui__result-excerpt mark { background: #f1fa8c; color: #282a36; }
+  .pagefind-ui__search-input { color: #f8f8f2; }
+</style>
 <script src="/pagefind/pagefind-ui.js" data-cfasync="false"></script>
 <script data-cfasync="false">
   new PagefindUI({ element: "#search", showSubResults: true, highlightParam: "highlight" });
