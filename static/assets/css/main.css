@@ -289,7 +289,7 @@ hr { border-color: var(--line); }
 .post-toc {
   position: fixed;
   top: 90px;
-  right: 20px;
+  left: 20px;
   width: 210px;
   background: var(--bg-alt);
   border: 1px solid var(--line);
