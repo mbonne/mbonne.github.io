@@ -52,6 +52,10 @@ enableGitInfo = true
   name = "About"
   url = "/about/"
   weight = 5
+[[menus.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 6
 
 [outputs]
   home = ["HTML", "RSS"]
