@@ -330,6 +330,9 @@ hr { border-color: var(--line); }
 
 /* ── Mobile inline TOC ──────────────────────────────────────────────── */
 .post-toc-inline {
+  position: sticky;
+  top: 56px;
+  z-index: 100;
   background: var(--bg-alt);
   border: 1px solid var(--line);
   border-radius: 4px;
