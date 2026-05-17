@@ -152,7 +152,7 @@ Before approving any MCP server for your organisation, assess it against these c
 | **Community signal** | GitHub stars, open issues, recent commits, known CVEs. A stale repo with no recent activity is a risk. |
 | **Anthropic registry** | MCP servers listed in Anthropic's official registry have passed a baseline review. Third-party sources require more scrutiny. |
 
-> **Treat every MCP server as a third-party software install.** It runs locally with the permissions of the user running it. A malicious or compromised MCP server can exfiltrate files, read environment variables, and intercept Claude's inputs and outputs. See [Section 8 of Part 1](https://buildtestrun.com/deploying-claude-safely-business-runbook) for the governance policy framework this vetting feeds into.
+> **Treat every MCP server as a third-party software install.** It runs locally with the permissions of the user running it. A malicious or compromised MCP server can exfiltrate files, read environment variables, and intercept Claude's inputs and outputs. See [Section 8 of Part 1](https://buildtestrun.com/deploying-claude-safely-business-runbook/#section-8-preventing-malicious-mcp-servers-and-plugins) for the governance policy framework this vetting feeds into.
 
 ---
 
