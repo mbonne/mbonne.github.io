@@ -10,7 +10,7 @@ canonical_url: "https://buildtestrun.com/deploying-claude-to-your-team-sysadmin-
 schema_type: TechArticle
 ---
 
-> **This is Part 2 of a two-part series.** [Part 1](https://buildtestrun.com/deploying-claude-safely-business-runbook) covers plan selection, data handling, usage policy, and the governance framework. This article assumes those decisions are made, your Team or Enterprise plan is active, and you are now executing the rollout.
+> **This is Part 2 of a two-part series.** [Part 1](https://buildtestrun.com/deploying-claude-safely-business-runbook) covers plan selection, data handling, usage policy, and the governance framework. This article assumes those decisions are made, your Team or Enterprise plan is active, and you are now executing the rollout. The disclaimer: I'm not you, this is only an example set of tasks, and always do your own research and testing. As this AI landscape changes so do the options available and strategies need to adapt.
 
 ## TL;DR
 
