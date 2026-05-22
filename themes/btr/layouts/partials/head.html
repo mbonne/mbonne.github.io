@@ -8,6 +8,11 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}assets/img/og-image.jpg">
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/cat_icon_158943.png">
 <meta name="color-scheme" content="dark">
