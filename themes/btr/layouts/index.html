@@ -1,8 +1,10 @@
 {{ define "main" }}
 <div class="container">
+  <h1 class="site-heading">Build Test Run</h1>
   {{ with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
   <section>
-    {{ range first 6 (where .Site.RegularPages "Type" "articles").ByDate.Reverse }}
+    <h2 class="section-heading">Recent Articles</h2>
+    {{ range first 10 (where .Site.RegularPages "Type" "articles").ByDate.Reverse }}
     <div class="post-preview">
       <a href="{{ .RelPermalink }}"><span class="post-title">{{ .Title }}</span></a>
       <p class="post-meta">{{ .Date.Format "January 2, 2006" }}</p>
