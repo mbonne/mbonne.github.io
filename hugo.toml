@@ -13,7 +13,7 @@ enableGitInfo = true
   email = "contact@buildtestrun.com"
   github = "mbonne"
   urlPretty = "buildtestrun.com"
-  description = "Homelab, tooling, and systems notes."
+  description = "Practical notes on homelab infrastructure, Docker, monitoring, automation, scripting, and AI tooling. Real-world systems engineering from someone who runs it all in production."
   cfAnalyticsToken = "344acca51469401aa001cb61766c8bf6"
 
 [markup.highlight]
