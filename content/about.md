@@ -21,6 +21,8 @@ My assistant. Technically an intern, but one that never sleeps, never takes lunc
 
 ---
 
-<a href="https://www.abuseipdb.com/user/305460" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
-  <img src="https://www.abuseipdb.com/contributor/305460.svg" alt="AbuseIPDB Contributor Badge" style="width: 254px; border-radius: 5px; border-top: 5px solid #bd93f9; border-right: 5px solid #44475a; border-bottom: 5px solid #44475a; border-left: 5px solid #bd93f9; padding: 5px; background: #282a36 linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.05) 50%, rgba(0,0,0,.15) 51%, rgba(0,0,0,0)); box-shadow: 2px 2px 1px 1px rgba(0,0,0,.4);">
-</a>
+<div style="text-align: center; margin-bottom: 4rem;">
+  <a href="https://www.abuseipdb.com/user/305460" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
+    <img src="https://www.abuseipdb.com/contributor/305460.svg" alt="AbuseIPDB Contributor Badge" style="width: 254px; border-radius: 5px; border-top: 5px solid #bd93f9; border-right: 5px solid #44475a; border-bottom: 5px solid #44475a; border-left: 5px solid #bd93f9; padding: 5px; background: #282a36 linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.05) 50%, rgba(0,0,0,.15) 51%, rgba(0,0,0,0)); box-shadow: 2px 2px 1px 1px rgba(0,0,0,.4);">
+  </a>
+</div>
