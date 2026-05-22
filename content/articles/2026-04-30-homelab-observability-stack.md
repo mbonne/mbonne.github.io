@@ -54,13 +54,13 @@ All containers share a Docker network with the rest of the homelab stack.
 
 Panel descriptions across all dashboards were written by Claude Code: each panel has a description field explaining what the metric measures, what normal looks like, and what to check if something looks off. It is static documentation, not a runtime AI dependency.
 
-{% include post-image.html src="/assets/img/posts/observability-stack-security-logs.png" alt="Security Logs dashboard showing fail2ban ban activity, SSH brute force volume, and Synology auth failures" caption="Security Logs dashboard" %}
+{{< figure src="/assets/img/posts/observability-stack-security-logs.png" alt="Security Logs dashboard showing fail2ban ban activity, SSH brute force volume, and Synology auth failures" caption="Security Logs dashboard" >}}
 
-{% include post-image.html src="/assets/img/posts/observability-stack-gpu.png" alt="node1 GPU dashboard showing Vulkan GPU utilisation, VRAM usage, and temperature" caption="node1 GPU dashboard" %}
+{{< figure src="/assets/img/posts/observability-stack-gpu.png" alt="node1 GPU dashboard showing Vulkan GPU utilisation, VRAM usage, and temperature" caption="node1 GPU dashboard" >}}
 
-{% include post-image.html src="/assets/img/posts/observability-stack-claude-usage.png" alt="Claude Usage dashboard showing Claude Code session stats: context usage, rate limits, and per-session cost" caption="Claude Usage dashboard" %}
+{{< figure src="/assets/img/posts/observability-stack-claude-usage.png" alt="Claude Usage dashboard showing Claude Code session stats: context usage, rate limits, and per-session cost" caption="Claude Usage dashboard" >}}
 
-{% include post-image.html src="/assets/img/posts/observability-stack-tailscale.png" alt="Tailscale Network dashboard showing mesh health and node status" caption="Tailscale Network dashboard" %}
+{{< figure src="/assets/img/posts/observability-stack-tailscale.png" alt="Tailscale Network dashboard showing mesh health and node status" caption="Tailscale Network dashboard" >}}
 
 ## Alerting
 
