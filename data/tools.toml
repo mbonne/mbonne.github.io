@@ -281,6 +281,12 @@ description = "Internet traffic trends, BGP routing data, outage tracking, and d
 categories = ["networking", "OSINT"]
 
 [[tools]]
+name = "SecurityTrails"
+url = "https://securitytrails.com/"
+description = "Historical DNS and WHOIS data for any domain or IP. Useful for tracing infrastructure changes, finding related assets, and mapping attacker infrastructure."
+categories = ["DNS", "OSINT", "security"]
+
+[[tools]]
 name = "YouGetSignal Open Port Check"
 url = "https://www.yougetsignal.com/tools/open-ports/"
 description = "External TCP port reachability check. Tests whether a port is accessible from outside your network. For those who could just run netcat but want a second opinion."
