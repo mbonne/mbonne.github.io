@@ -390,6 +390,39 @@ pre:hover .copy-btn { opacity: 1; }
 
 .jump-to-articles { margin: 1.5rem 0 2.5rem; }
 
+/* ── Tools page ─────────────────────────────────────────────────────── */
+.tool-card {
+  border-bottom: 1px solid var(--line);
+  padding: 0.75rem 0;
+}
+.tool-card:last-child { border-bottom: none; }
+
+.tool-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--purple);
+  text-decoration: none;
+}
+.tool-name:hover { color: var(--green); }
+
+.tool-tags { margin: 0.25rem 0 0.3rem; }
+
+.tool-tag {
+  display: inline-block;
+  background-color: var(--line);
+  color: var(--purple);
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin: 0 2px 0 0;
+  font-size: 0.82rem;
+}
+
+.tool-desc {
+  margin: 0.2rem 0 0;
+  color: var(--fg);
+  font-size: 0.95rem;
+}
+
 /* ── Tag labels ─────────────────────────────────────────────────────── */
 .blog-tags a {
   display: inline-block;
