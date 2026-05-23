@@ -2,7 +2,7 @@
 name = "SSL Labs"
 url = "https://www.ssllabs.com/ssltest/"
 description = "Qualys SSL Labs server test. Grades TLS configuration and flags weak ciphers, missing headers, and certificate issues."
-categories = ["security", "ssl"]
+categories = ["security", "SSL"]
 
 [[tools]]
 name = "SecurityHeaders.com"
@@ -14,7 +14,7 @@ categories = ["security"]
 name = "hstspreload.org"
 url = "https://hstspreload.org"
 description = "Submit a domain to the browser HSTS preload list and check its current preload status across Chrome, Firefox, and Safari."
-categories = ["security", "ssl"]
+categories = ["security", "SSL"]
 
 [[tools]]
 name = "Shodan"
@@ -26,22 +26,160 @@ categories = ["security", "networking"]
 name = "dnschecker.org"
 url = "https://dnschecker.org"
 description = "Check DNS propagation for any record type (A, AAAA, MX, TXT, CNAME) across multiple global nameservers."
-categories = ["dns", "networking"]
+categories = ["DNS", "networking"]
 
 [[tools]]
 name = "MXToolbox"
 url = "https://mxtoolbox.com"
 description = "DNS lookup, MX record checks, blacklist monitoring, and email header analysis. Useful for diagnosing mail delivery issues."
-categories = ["dns", "networking"]
+categories = ["DNS", "networking"]
+
+[[tools]]
+name = "DNSSEC Analyzer"
+url = "https://dnssec-analyzer.verisignlabs.com"
+description = "Verisign DNSSEC debugger. Validates the full DNSSEC chain for a domain and surfaces signing errors, missing records, or broken delegations."
+categories = ["DNS", "security"]
+
+[[tools]]
+name = "DNSViz"
+url = "https://dnsviz.net"
+description = "Visual DNSSEC validation tool. Traces the chain of trust from root to zone and renders a dependency graph of signing relationships."
+categories = ["DNS", "security"]
+
+[[tools]]
+name = "Google Admin Toolbox"
+url = "https://toolbox.googleapps.com/apps/main/"
+description = "Google's suite of DNS and mail diagnostics: Dig, Check MX, HAR Analyzer, Log Analyzer, and Browserinfo. No account required."
+categories = ["DNS", "networking"]
+
+[[tools]]
+name = "Message Header Analyzer"
+url = "https://mha.azurewebsites.net/"
+description = "Microsoft tool for parsing email headers. Shows the hop-by-hop delivery path, delays, and authentication results (SPF, DKIM, DMARC)."
+categories = ["networking"]
 
 [[tools]]
 name = "DebugBear"
 url = "https://www.debugbear.com"
 description = "Page speed analysis with detailed breakdowns of Core Web Vitals, render-blocking resources, and performance timelines."
-categories = ["performance", "seo"]
+categories = ["performance", "SEO"]
 
 [[tools]]
 name = "GTmetrix"
 url = "https://gtmetrix.com"
 description = "Website performance report with waterfall charts, Lighthouse scores, and load time recommendations."
 categories = ["performance"]
+
+[[tools]]
+name = "Hybrid Analysis"
+url = "https://www.hybrid-analysis.com"
+description = "Free malware analysis sandbox from CrowdStrike. Detonates files and URLs in isolated VMs and reports on network activity, dropped files, and behavioural indicators."
+categories = ["security", "malware"]
+
+[[tools]]
+name = "VirusTotal"
+url = "https://www.virustotal.com/gui/home/upload"
+description = "Scan files, URLs, IPs, and domains against 70+ antivirus engines and threat intelligence feeds. Useful for quick triage before deeper analysis."
+categories = ["security", "malware"]
+
+[[tools]]
+name = "Browserling"
+url = "https://www.browserling.com/"
+description = "Live interactive browser testing across multiple OS and browser combinations. Useful for checking how a site or payload renders without touching your own browser."
+categories = ["security"]
+
+[[tools]]
+name = "AbuseIPDB"
+url = "https://www.abuseipdb.com/"
+description = "Community-maintained IP reputation database. Check whether an IP has been reported for abuse, and submit new reports from your own logs."
+categories = ["security", "OSINT"]
+
+[[tools]]
+name = "Talos Intelligence"
+url = "https://talosintelligence.com/"
+description = "Cisco Talos threat intelligence portal. Look up IP, domain, and file reputation backed by one of the largest commercial threat intel feeds."
+categories = ["security", "OSINT"]
+
+[[tools]]
+name = "SpamCop"
+url = "https://www.spamcop.net/"
+description = "Parse and report spam email. Traces the originating IP, identifies the responsible network, and submits abuse reports to the relevant provider."
+categories = ["security", "networking"]
+
+[[tools]]
+name = "Postman"
+url = "https://www.postman.com/downloads/"
+description = "GUI API client for building, testing, and documenting HTTP requests. Supports environments, collections, pre-request scripts, and automated test assertions."
+categories = ["API"]
+
+[[tools]]
+name = "ReqBin"
+url = "https://reqbin.com/"
+description = "Browser-based HTTP client. Send GET, POST, PUT, DELETE requests with custom headers and body without installing anything."
+categories = ["API"]
+
+[[tools]]
+name = "Tailscale"
+url = "https://tailscale.com/"
+description = "Zero-config WireGuard mesh VPN. Connects devices across networks without port forwarding or firewall rules. Free tier covers personal use and small teams."
+categories = ["networking", "security"]
+
+[[tools]]
+name = "EFF Tools"
+url = "https://www.eff.org/pages/tools"
+description = "Electronic Frontier Foundation's curated list of privacy and security tools: cover your tracks, encrypted communication, and surveillance self-defence."
+categories = ["security", "privacy"]
+
+[[tools]]
+name = "Certbot"
+url = "https://certbot.eff.org/"
+description = "EFF's ACME client for automating Let's Encrypt certificate issuance and renewal. Generates OS and web server-specific installation instructions."
+categories = ["SSL", "CLI"]
+
+[[tools]]
+name = "VulDB"
+url = "https://vuldb.com/"
+description = "Independent vulnerability database with detailed entries on disclosed CVEs, exploitation timelines, vendor advisories, and patch status."
+categories = ["security", "vulns"]
+
+[[tools]]
+name = "Exploit Database"
+url = "https://www.exploit-db.com/"
+description = "Offensive Security's archive of public exploits and vulnerable software. Useful for checking whether a known CVE has working public exploit code."
+categories = ["security", "vulns"]
+
+[[tools]]
+name = "CVE.org"
+url = "https://www.cve.org/"
+description = "The authoritative CVE list maintained by MITRE. Look up CVE identifiers, check reserved vs. published status, and find CNA assignment details."
+categories = ["security", "vulns"]
+
+[[tools]]
+name = "NVD"
+url = "https://nvd.nist.gov/vuln"
+description = "NIST National Vulnerability Database. Enriches CVE entries with CVSS scores, CPE applicability statements, and CWE mappings."
+categories = ["security", "vulns"]
+
+[[tools]]
+name = "MITRE ATT&CK"
+url = "https://attack.mitre.org/"
+description = "Adversary tactics and techniques knowledge base built from real-world observations. Reference for threat modelling, detection engineering, and red team planning."
+categories = ["security", "vulns", "OSINT"]
+
+[[tools]]
+name = "nmap"
+url = "https://nmap.org/book/man.html"
+description = "Network discovery and security auditing tool. Port scanning, OS detection, service version enumeration, and scriptable probes via the Nmap Scripting Engine."
+categories = ["security", "networking", "CLI"]
+
+[[tools]]
+name = "Burp Suite Community"
+url = "https://portswigger.net/burp/communitydownload"
+description = "Web application security testing proxy from PortSwigger. Intercepts and modifies HTTP traffic, with a manual repeater and basic scanner in the free tier."
+categories = ["security", "CLI"]
+
+[[tools]]
+name = "Kali Linux"
+url = "https://www.kali.org/get-kali/"
+description = "Debian-based Linux distribution maintained by Offensive Security. Pre-loaded with penetration testing and forensics tooling. Available as ISO, VM, WSL, and container images."
+categories = ["security", "CLI"]
