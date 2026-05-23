@@ -3,7 +3,7 @@
   <div class="page-content">
     <h1>{{ .Title }}</h1>
 
-    {{ $tools := .Site.Data.tools.tools }}
+    {{ $tools := hugo.Data.tools.tools }}
 
     {{ $cats := slice }}
     {{ range $tools }}
