@@ -281,10 +281,10 @@ description = "Active network throughput measurement tool. Tests TCP and UDP ban
 categories = ["networking", "CLI"]
 
 [[tools]]
-name = "Helios"
-url = "https://heliosapp.com/"
-description = "macOS system diagnostics app. Surfaces CPU, GPU, memory, battery, and thermal data in one place."
-categories = ["performance"]
+name = "Helios LanTest"
+url = "https://www.helios.de/web/EN/products/LanTest.html"
+description = "macOS LAN performance testing tool. Measures throughput, CPU load, and latency across network shares and servers. Useful for benchmarking NAS and file server performance."
+categories = ["networking", "performance"]
 
 [[tools]]
 name = "Blackmagic Disk Speed Test"
