@@ -273,3 +273,27 @@ name = "Cloudflare Radar"
 url = "https://radar.cloudflare.com/"
 description = "Internet traffic trends, BGP routing data, outage tracking, and domain-level insights sourced from Cloudflare's global network."
 categories = ["networking", "OSINT"]
+
+[[tools]]
+name = "iperf"
+url = "https://iperf.fr/"
+description = "Active network throughput measurement tool. Tests TCP and UDP bandwidth between two endpoints. Standard first stop when a link feels slow."
+categories = ["networking", "CLI"]
+
+[[tools]]
+name = "Helios"
+url = "https://heliosapp.com/"
+description = "macOS system diagnostics app. Surfaces CPU, GPU, memory, battery, and thermal data in one place."
+categories = ["performance"]
+
+[[tools]]
+name = "Blackmagic Disk Speed Test"
+url = "https://apps.apple.com/us/app/blackmagic-disk-speed-test/id425264550?mt=12"
+description = "macOS app for measuring real-world disk read and write throughput. Free, accurate, and the de facto standard for checking storage performance on Mac."
+categories = ["performance"]
+
+[[tools]]
+name = "NetSpot"
+url = "https://www.netspotapp.com/"
+description = "WiFi site survey and analysis tool for macOS and Windows. Visualises signal strength, interference, and channel overlap across a physical space. Poor man's Ekahau."
+categories = ["networking"]
