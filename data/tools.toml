@@ -89,6 +89,12 @@ description = "Live interactive browser testing across multiple OS and browser c
 categories = ["security"]
 
 [[tools]]
+name = "AdBlock Tester"
+url = "https://adblock.turtlecute.org/"
+description = "Tests whether your ad blocker, DNS sinkhole, or browser extension is actually blocking ads and trackers. Checks a range of known ad and tracking domains."
+categories = ["security", "privacy"]
+
+[[tools]]
 name = "AbuseIPDB"
 url = "https://www.abuseipdb.com/"
 description = "Community-maintained IP reputation database. Check whether an IP has been reported for abuse, and submit new reports from your own logs."
