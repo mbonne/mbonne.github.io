@@ -183,3 +183,33 @@ name = "Kali Linux"
 url = "https://www.kali.org/get-kali/"
 description = "Debian-based Linux distribution maintained by Offensive Security. Pre-loaded with penetration testing and forensics tooling. Available as ISO, VM, WSL, and container images."
 categories = ["security", "CLI"]
+
+[[tools]]
+name = "SecLists (Passwords)"
+url = "https://github.com/danielmiessler/SecLists/tree/master/Passwords"
+description = "Daniel Miessler's curated collection of password wordlists used in credential stuffing and brute-force testing. If your password is in here, thoughts and prayers."
+categories = ["security", "CLI"]
+
+[[tools]]
+name = "WhatRuns"
+url = "https://www.whatruns.com/"
+description = "Browser extension that fingerprints the technology stack of any website: frameworks, CDNs, analytics, CMS, hosting providers, and more."
+categories = ["security", "OSINT"]
+
+[[tools]]
+name = "Dencode"
+url = "https://dencode.com/en/"
+description = "Encode and decode strings across a wide range of formats simultaneously: Base64, URL, HTML entities, hex, MD5, SHA, and more in one view."
+categories = ["encoding"]
+
+[[tools]]
+name = "Tools64"
+url = "https://tools64.com/"
+description = "Collection of online encoding, conversion, and formatting utilities. Covers Base64, binary, hex, JSON, XML, hashing, and various text transformations."
+categories = ["encoding"]
+
+[[tools]]
+name = "CyberChef"
+url = "https://www.cyberchef.dev/cyberchef"
+description = "GCHQ's Swiss Army knife for data transformation. Chain operations to encode, decode, compress, encrypt, parse, and analyse data in a drag-and-drop recipe interface."
+categories = ["security", "encoding"]
