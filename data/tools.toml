@@ -1,0 +1,47 @@
+[[tools]]
+name = "SSL Labs"
+url = "https://www.ssllabs.com/ssltest/"
+description = "Qualys SSL Labs server test. Grades TLS configuration and flags weak ciphers, missing headers, and certificate issues."
+categories = ["security", "ssl"]
+
+[[tools]]
+name = "SecurityHeaders.com"
+url = "https://securityheaders.com"
+description = "Checks HTTP response headers against security best practices: CSP, HSTS, X-Frame-Options, Permissions-Policy, and more."
+categories = ["security"]
+
+[[tools]]
+name = "hstspreload.org"
+url = "https://hstspreload.org"
+description = "Submit a domain to the browser HSTS preload list and check its current preload status across Chrome, Firefox, and Safari."
+categories = ["security", "ssl"]
+
+[[tools]]
+name = "Shodan"
+url = "https://www.shodan.io"
+description = "Search engine for internet-connected devices. Find open ports, exposed services, and banner data for any IP or domain."
+categories = ["security", "networking"]
+
+[[tools]]
+name = "dnschecker.org"
+url = "https://dnschecker.org"
+description = "Check DNS propagation for any record type (A, AAAA, MX, TXT, CNAME) across multiple global nameservers."
+categories = ["dns", "networking"]
+
+[[tools]]
+name = "MXToolbox"
+url = "https://mxtoolbox.com"
+description = "DNS lookup, MX record checks, blacklist monitoring, and email header analysis. Useful for diagnosing mail delivery issues."
+categories = ["dns", "networking"]
+
+[[tools]]
+name = "DebugBear"
+url = "https://www.debugbear.com"
+description = "Page speed analysis with detailed breakdowns of Core Web Vitals, render-blocking resources, and performance timelines."
+categories = ["performance", "seo"]
+
+[[tools]]
+name = "GTmetrix"
+url = "https://gtmetrix.com"
+description = "Website performance report with waterfall charts, Lighthouse scores, and load time recommendations."
+categories = ["performance"]
