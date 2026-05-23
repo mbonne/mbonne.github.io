@@ -213,3 +213,63 @@ name = "CyberChef"
 url = "https://www.cyberchef.dev/cyberchef"
 description = "GCHQ's Swiss Army knife for data transformation. Chain operations to encode, decode, compress, encrypt, parse, and analyse data in a drag-and-drop recipe interface."
 categories = ["security", "encoding"]
+
+[[tools]]
+name = "PhishTool"
+url = "https://www.phishtool.com/"
+description = "Phishing email analysis platform. Parses email headers, extracts indicators, correlates against threat intelligence, and produces a structured investigation report."
+categories = ["security", "OSINT"]
+
+[[tools]]
+name = "Mail-Tester"
+url = "https://www.mail-tester.com/"
+description = "Send a test email to a generated address and get a spam score. Checks SPF, DKIM, DMARC, blacklist status, content, and server configuration."
+categories = ["security", "networking"]
+
+[[tools]]
+name = "DNSDumpster"
+url = "https://dnsdumpster.com/"
+description = "Passive DNS reconnaissance tool. Maps subdomains, MX and TXT records, and hosting providers for a target domain without active scanning."
+categories = ["DNS", "OSINT"]
+
+[[tools]]
+name = "crt.sh"
+url = "https://crt.sh/"
+description = "Certificate transparency log search. Find all TLS certificates ever issued for a domain, including subdomains that may not be publicly advertised."
+categories = ["SSL", "OSINT"]
+
+[[tools]]
+name = "CyberSecTools"
+url = "https://cybersectools.com/tools"
+description = "Curated directory of security tools categorised by use case. Useful for discovering tools beyond the usual shortlist."
+categories = ["security"]
+
+[[tools]]
+name = "dnstwist"
+url = "https://dnstwist.it/"
+description = "Typosquatting and phishing domain detector. Generates permutations of a target domain and checks which are registered, with MX and WHOIS lookups."
+categories = ["DNS", "security"]
+
+[[tools]]
+name = "LogJam Test"
+url = "https://logjam101.github.io/"
+description = "Tests whether your browser or server is vulnerable to the LOGJAM attack by checking support for weak Diffie-Hellman key exchange parameters."
+categories = ["security", "SSL"]
+
+[[tools]]
+name = "DNS Leak Test"
+url = "https://www.dnsleaktest.com/"
+description = "Check whether your DNS queries are leaking outside your VPN tunnel. Identifies the resolvers your system is actually using."
+categories = ["DNS", "networking", "privacy"]
+
+[[tools]]
+name = "BrowserLeaks DNS"
+url = "https://browserleaks.com/dns"
+description = "Shows which DNS resolvers your browser is using, including WebRTC-based leaks that bypass system-level VPN routing."
+categories = ["DNS", "networking", "privacy"]
+
+[[tools]]
+name = "Cloudflare Radar"
+url = "https://radar.cloudflare.com/"
+description = "Internet traffic trends, BGP routing data, outage tracking, and domain-level insights sourced from Cloudflare's global network."
+categories = ["networking", "OSINT"]
