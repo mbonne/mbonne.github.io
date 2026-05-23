@@ -283,7 +283,7 @@ categories = ["networking", "OSINT"]
 [[tools]]
 name = "SecurityTrails"
 url = "https://securitytrails.com/"
-description = "Historical DNS and WHOIS data for any domain or IP. Useful for tracing infrastructure changes, finding related assets, and mapping attacker infrastructure."
+description = "Historical DNS and WHOIS data for any domain or IP. Useful for tracing infrastructure changes, reviewing DNS change history, finding related assets, and mapping attacker infrastructure."
 categories = ["DNS", "OSINT", "security"]
 
 [[tools]]
