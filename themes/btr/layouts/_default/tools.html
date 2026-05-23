@@ -3,7 +3,7 @@
   <div class="page-content">
     <h1>{{ .Title }}</h1>
 
-    {{ $tools := hugo.Data.tools.tools }}
+    {{ $tools := sort hugo.Data.tools.tools "name" }}
 
     {{ $cats := slice }}
     {{ range $tools }}
