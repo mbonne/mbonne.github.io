@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="container">
+  <div class="page-content">
+    <h1>{{ .Title }}</h1>
+
+    {{ $tools := .Site.Data.tools.tools }}
+
+    {{ $cats := slice }}
+    {{ range $tools }}
+      {{ range .categories }}
+        {{ $cats = $cats | append . }}
+      {{ end }}
+    {{ end }}
+    {{ $cats = $cats | uniq | sort }}
+
+    <div class="topic-filter" id="tools-filter">
+      <button class="topic-btn active" data-cat="all">All</button>
+      {{ range $cats }}
+      <button class="topic-btn" data-cat="{{ . }}">{{ . }}</button>
+      {{ end }}
+    </div>
+
+    <div id="tools-list">
+      {{ range $tools }}
+      {{ $catStr := delimit .categories "," }}
+      <div class="tool-card" data-categories="{{ $catStr }}">
+        <a href="{{ .url }}" class="tool-name" target="_blank" rel="noopener noreferrer">{{ .name }} &#8599;</a>
+        <div class="tool-tags">
+          {{ range .categories }}<span class="tool-tag">{{ . }}</span>{{ end }}
+        </div>
+        <p class="tool-desc">{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</div>
+<script defer src="/assets/js/tools-filter.js"></script>
+{{ end }}
