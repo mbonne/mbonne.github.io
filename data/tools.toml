@@ -281,6 +281,18 @@ description = "Internet traffic trends, BGP routing data, outage tracking, and d
 categories = ["networking", "OSINT"]
 
 [[tools]]
+name = "YouGetSignal Open Port Check"
+url = "https://www.yougetsignal.com/tools/open-ports/"
+description = "External TCP port reachability check. Tests whether a port is accessible from outside your network. For those who could just run netcat but want a second opinion."
+categories = ["networking", "security"]
+
+[[tools]]
+name = "ifconfig.me"
+url = "https://ifconfig.me/"
+description = "Returns your public IP address and request headers. Also works as a plain-text API: curl ifconfig.me returns just the IP, useful in scripts."
+categories = ["networking"]
+
+[[tools]]
 name = "iperf"
 url = "https://iperf.fr/"
 description = "Active network throughput measurement tool. Tests TCP and UDP bandwidth between two endpoints. Standard first stop when a link feels slow."
