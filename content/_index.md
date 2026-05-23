@@ -2,15 +2,17 @@
 title: "Build Test Run"
 ---
 
-Build Test Run is a personal technical blog covering homelab infrastructure, Docker, monitoring, automation, scripting, and AI tooling. The posts are written from the perspective of someone who runs this in production, on real hardware, with real consequences when things break at 2am.
+Build Test Run is a personal technical blog covering homelabbing, infrastructure, monitoring, automation, scripting, and AI tooling. 
+The posts are written by AI, proofread and fact-checked by an IT Professional(not a creative writer)
 
-The site name comes from a simple rule: if you can build it, test it, and run it, you understand it. Not the theory of it. Not the marketing version. The actual thing, with all the configuration edge cases and undocumented behaviours that only show up once you have skin in the game.
+The site name comes from a simple principle: if you can build it, test it, and run it - you understand it. 
+Not the theory of it. Not the marketing version. The actual thing, with all the configuration edge cases and undocumented behaviours that only show up once you have skin in the game.
 
 ## What gets covered
 
 Most posts fall into a few recurring areas.
 
-**Docker and containerisation:** how to structure compose stacks, deal with networking quirks, manage persistent storage safely, and keep images lean and auditable. Includes practical patterns for multi-stack environments where service isolation actually matters.
+**containerisation:** how to structure compose stacks, deal with networking quirks, manage persistent storage safely, and keep images lean and auditable. Includes practical patterns for multi-stack environments where service isolation actually matters.
 
 **Monitoring and observability:** building a full metrics and logging pipeline with Prometheus, Grafana, Loki, and Vector. What to instrument, what to alert on, and how to avoid alert fatigue from a monitoring stack that cries wolf every time a container restarts cleanly.
 
@@ -22,9 +24,9 @@ Most posts fall into a few recurring areas.
 
 ## Who this is for
 
-If you run your own servers, maintain a homelab, or deal with infrastructure as part of your work, most of what is here will be directly applicable. The writing assumes you are comfortable with Linux and do not need basic concepts explained from scratch.
+If you run your own servers, maintain a homelab, or deal with infrastructure as part of your work, most of what is here will be directly applicable. The writing assumes you are comfortable with a cli and do not need basic concepts explained from scratch.
 
-This is not a beginner tutorial site. The focus is on the decisions and trade-offs that come up once you are past the basics: why one approach over another, what breaks in practice, and what the documentation does not tell you.
+The focus is on the decisions and trade-offs that come up once you are past the basics: why one approach over another, what breaks in practice, and what the documentation does not tell you.
 
 ## New posts
 
