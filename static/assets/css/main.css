@@ -388,6 +388,8 @@ pre:hover .copy-btn { opacity: 1; }
 }
 .btn-outline:hover { background: var(--purple); color: var(--bg); }
 
+.jump-to-articles { margin: 1.5rem 0 2.5rem; }
+
 /* ── Tag labels ─────────────────────────────────────────────────────── */
 .blog-tags a {
   display: inline-block;

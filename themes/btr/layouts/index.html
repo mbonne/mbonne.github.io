@@ -2,7 +2,10 @@
 <div class="container">
   <h1 class="site-heading">Build Test Run</h1>
   {{ with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
-  <section>
+  <div class="jump-to-articles">
+    <a href="#recent-articles" class="btn-outline">Recent Articles ↓</a>
+  </div>
+  <section id="recent-articles">
     <h2 class="section-heading">Recent Articles</h2>
     {{ range first 10 (where .Site.RegularPages "Type" "articles").ByDate.Reverse }}
     <div class="post-preview">
