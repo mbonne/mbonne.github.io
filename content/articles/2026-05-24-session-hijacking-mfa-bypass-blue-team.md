@@ -4,8 +4,7 @@ subtitle: AiTM phishing and infostealers don't break MFA. They route around it.
 description: How AiTM phishing and infostealers bypass MFA, what to look for in auth logs, and practical mitigations for Entra, Okta, and Google Workspace.
 date: 2026-05-24
 lastmod: 2026-05-24
-categories:
-  - homelab
+categories: [security]
 tags:
   - security
   - mfa

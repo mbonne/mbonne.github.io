@@ -5,6 +5,7 @@ subtitle: "Transparent about the tooling from day one"
 description: "How buildtestrun.com was built and maintained using Claude Code, with an Obsidian-based content pipeline and a custom Hugo theme."
 date: 2026-03-21
 lastmod: 2026-03-21
+categories: [tooling]
 tags: [meta, claude, obsidian, tooling]
 schema_type: Article
 slug: "building-this-site-with-claude-code"

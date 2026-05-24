@@ -5,6 +5,7 @@ subtitle: "Account security basics and zone-level hardening for a solid starting
 description: "A practical guide to locking down your Cloudflare account: 2FA, API tokens, DNSSEC, SSL/TLS Full Strict, security headers via Transform Rules, and audit logging."
 date: 2026-03-21
 lastmod: 2026-03-21
+categories: [security]
 tags: [cloudflare, security, dns, hardening]
 schema_type: Article
 slug: "cloudflare-account-hardening"
