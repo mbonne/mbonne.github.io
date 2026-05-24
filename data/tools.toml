@@ -321,3 +321,9 @@ name = "NetSpot"
 url = "https://www.netspotapp.com/"
 description = "WiFi site survey and analysis tool for macOS and Windows. Visualises signal strength, interference, and channel overlap across a physical space. Poor man's Ekahau."
 categories = ["networking"]
+
+[[tools]]
+name = "DeepWiki"
+url = "https://deepwiki.com/"
+description = "AI-generated documentation and architecture overviews for public GitHub repositories. Useful for quickly understanding an unfamiliar codebase without reading every file."
+categories = ["AI"]
