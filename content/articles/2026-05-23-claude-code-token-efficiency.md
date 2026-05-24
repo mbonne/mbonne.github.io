@@ -11,8 +11,6 @@ canonical_url: "https://buildtestrun.com/claude-code-token-efficiency"
 schema_type: TechArticle
 ---
 
-# Claude Code Token Efficiency: Trim Context, Cut the Bill
-
 If you have spent any time with Claude Code, you have noticed that sessions have limits. Not limits on what the model can do (mostly), but limits on how much it can process before it hits the ceiling of your usage window. Hit it mid-task and you are waiting. Hit it repeatedly and you start thinking more carefully about where those tokens are going.
 
 This post covers the mechanics of context windows, what actually burns through your allowance, and the practical measures that keep spend under control: per-project scoping, token-optimised tooling, and sub-agent workflows.

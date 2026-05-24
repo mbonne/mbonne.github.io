@@ -11,8 +11,6 @@ canonical_url: "https://buildtestrun.com/cloudflare-waf-grafana-abuseipdb"
 schema_type: TechArticle
 ---
 
-# Website Monitoring with Grafana and AbuseIPDB Reporting
-
 > **TL;DR:** Built a Grafana dashboard to monitor this site and found the majority of traffic is automated scanners probing for vulnerabilities that do not exist here. Set up five Cloudflare WAF rules to block the worst of it, then wrote a script that pulls WAF block data, reports persistent offenders to AbuseIPDB automatically, and maintains a dynamic IP blocklist within Cloudflare's free-tier rule limits.
 
 I set up a Grafana dashboard to monitor traffic to this site. The intent was straightforward: see who is visiting, identify any performance issues, and get a feel for how the Cloudflare layer is performing.
