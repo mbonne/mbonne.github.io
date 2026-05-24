@@ -192,7 +192,7 @@ Claude Desktop is the GUI application for chat, cowork, and productivity. It tar
 - Distribute the PKG or DMG via your MDM software catalogue
 - Scope the deployment policy to your approved security group
 
-> **Non-admin gotcha:** Claude Desktop installs to `/Applications`, which requires admin rights on macOS. Non-admin users cannot self-install. Use MDM to push the install, which runs as root and handles this transparently. Without MDM, IT must perform a manual install or offer a self-service portal (Jamf Self Service, etc.).
+> **Non-admin gotcha:** Claude Desktop typically installs to `/Applications`, which requires admin rights on macOS. Users can avoid this by installing into `~/Applications` instead, which is user-writable and requires no elevation. Anthropic's enterprise docs explicitly distinguish between these two locations. For managed environments, MDM deployment is still the cleaner path: the installer runs with elevated privileges, lands in the system-wide location, and stays under IT control. Without MDM, options are a manual IT install or a self-service portal (Jamf Self Service, Company Portal, etc.).
 
 #### Windows
 
