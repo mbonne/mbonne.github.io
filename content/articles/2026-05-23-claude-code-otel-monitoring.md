@@ -15,6 +15,8 @@ Claude Code has built-in OpenTelemetry (OTel) export that most users never touch
 
 This post covers setting it up on a self-hosted Grafana + Loki + Prometheus stack using docker-compose. If you run multiple machines, the same collector handles them all; each machine just sends to the same endpoint with a different `host.name` label.
 
+![Claude Code OTel monitoring dashboard in Grafana showing cost, token usage, and session metrics](/assets/img/posts/2026-05-23-claude-code-otel-monitoring/claude-code-otel-dashboard.png)
+
 ## Prerequisites
 
 This post assumes you already have:
