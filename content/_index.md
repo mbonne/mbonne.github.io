@@ -3,7 +3,7 @@ title: "Build Test Run"
 ---
 
 Build Test Run is a personal technical blog covering homelabbing, infrastructure, monitoring, automation, scripting, and AI tooling. 
-The posts are written by AI, proofread and fact-checked by an IT Professional(not a creative writer)
+Posts start as drafts: the ideas, structure, and technical content come from direct experience, then AI handles editing and final polish before review and publish.
 
 The site name comes from a simple principle: if you can build it, test it, and run it - you understand it. 
 Not the theory of it. Not the marketing version. The actual thing, with all the configuration edge cases and undocumented behaviours that only show up once you have skin in the game.
