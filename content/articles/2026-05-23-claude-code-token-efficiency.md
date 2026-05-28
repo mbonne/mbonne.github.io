@@ -43,6 +43,27 @@ Run `/stats` before starting heavy sessions. The session stops when the ceiling 
 
 The output shows context usage (tokens consumed in the current conversation) and rate limit position (where you are against the rolling window). Both matter. Context usage affects cost per turn; rate limit position determines whether the session can continue.
 
+### Plan limits at a glance
+
+There is no separate daily cap. Usage is governed by the 5-hour rolling window plus a weekly Claude Code cap. Anthropic does not publish exact token counts per window; the table below uses published multipliers relative to Pro as the baseline.
+
+> These figures are a point-in-time snapshot. Anthropic adjusts limits without notice. Verify current values at the [Claude pricing page](https://www.anthropic.com/pricing) and [plan documentation](https://support.anthropic.com/en/articles/11049762-choosing-a-claude-ai-plan) before making plan decisions.
+
+| Plan | Price | Usage vs Pro | 5-hr rolling window | Weekly Claude Code cap | Context window |
+| --- | --- | --- | --- | --- | --- |
+| Free | Free | Below baseline | Limited | Yes | 200k |
+| Pro | $20/mo | 1x baseline | Rolling | Yes | 200k |
+| Max 5x | $100/mo | 5x Pro | Rolling | Yes | 200k |
+| Max 20x | $200/mo | 20x Pro | Rolling | Yes | 200k |
+| Team Standard | $30/seat/mo | 1.25x Pro | Rolling | Yes (all models) | 200k |
+| Team Premium | Contact sales | 6.25x Pro | Rolling | Yes (all models; separate Sonnet cap) | 200k |
+| Enterprise (seat-based) | Custom | Per seat type | Rolling | Varies by seat | 200k |
+| Enterprise (usage-based) | Custom (API rates) | No per-seat cap | None | None | 200k |
+
+Context window figures reflect Sonnet 4.6. Opus 4.7 supports a 1M token context window on plans that include it.
+
+How urgently you need to manage context depends on plan headroom. On Pro, a bloated conversation compounds fast against a tight 5-hour window. On Max 20x or usage-based Enterprise the urgency is lower, but the principle holds: response quality degrades as context fills regardless of limit. See [/compact and /clear](#compact-and-clear).
+
 ## What Actually Burns Tokens
 
 In rough order of impact:
