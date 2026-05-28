@@ -135,7 +135,7 @@ This stops AiTM and BitM. It does not stop infostealers.
 | BYOD controls / device enrollment                                          | Prevents unmanaged devices from accessing corporate apps                                                                                                                                                                                                                                                                           | No                                                                   | Yes                                                                |
 | ITDR (Identity Threat Detection and Response)                              | Monitors the identity plane for anomalies: impossible travel, session replay from new IP/ASN, new OAuth grants, new MFA method registrations. Alerts and can trigger automated response: revoke session, require step-up auth. Examples: Microsoft Entra ID Protection, Okta ThreatInsight, Crowdstrike Falcon Identity, Huntress | Partial: detects post-auth session replay, not the auth event itself | Partial: detects anomalous session behaviour after cookie theft    |
 
-The link-in-document delivery pattern defeats email gateways and Safe Links because the email body URL is legitimate, and the malicious link inside the document is never inspected at the email layer. DNS filtering cannot block the hosting domain. Browser isolation is the most complete network-layer prevention control: the session token never exists on the endpoint regardless of how the delivery was staged. 
+The link-in-document delivery pattern defeats email gateways and Safe Links because the email body URL is legitimate, and the malicious link inside the document is never inspected at the email layer.[^safelinks] DNS filtering cannot block the hosting domain. Browser isolation is the most complete network-layer prevention control: the session token never exists on the endpoint regardless of how the delivery was staged. 
 
 ITDR sits in a different category: it does not prevent the initial compromise, but it is the most likely control to detect and contain an active session hijacking incident, particularly the post-auth replay pattern that no other layer sees.
 
@@ -153,3 +153,5 @@ If session hijacking is confirmed or suspected, the below are some typical steps
 6. **Preserve logs** before they roll off retention windows.
 
 For full IR process: [NIST SP 800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) and [Microsoft's incident response overview](https://learn.microsoft.com/en-us/security/operations/incident-response-overview).
+
+[^safelinks]: Defender for Office 365 Plan 2 Safe Links for Office apps does attempt nested link scanning at click time on managed devices, but this operates at the endpoint/app layer, not at email delivery. Browser previews and unmanaged devices are not covered.
