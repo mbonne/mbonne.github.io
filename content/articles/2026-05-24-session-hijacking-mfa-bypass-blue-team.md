@@ -51,9 +51,9 @@ The second vector bypasses authentication entirely. Infostealer malware reads se
 
 Stolen cookies are imported into the attacker's browser. The session resumes. No login prompt, no MFA challenge, nothing to detect at the identity layer.
 
-Passkeys and phishing-resistant MFA stop AiTM and BitM. They do not stop infostealers. There is no authentication event to resist.
+Passkeys and phishing-resistant MFA stop AiTM and BitM. They do not stop infostealers. The passkey private key lives in the platform authenticator and cannot be exfiltrated; the post-authentication session can. There is no authentication event to resist: the infostealer skips it entirely.
 
-A compounding risk: browser profile sync. A user logs into a personal Google or Microsoft profile on a work device and enables sync. Their personal device picks up an infostealer infection. Corporate session cookies, now synced to the personal device, are stolen. EDR on the work device sees nothing, because the compromise happened elsewhere.
+A compounding risk: browser profile sync. A user signs into a personal Google or Microsoft profile on a work device and enables sync. Their personal device picks up an infostealer infection. Chrome and Edge do not sync session cookies, but they do sync saved passwords via the browser's password manager. Corporate credentials synced to the personal device are exfiltrated from there. EDR on the work device sees nothing, because the compromise happened elsewhere.
 
 ### OAuth consent phishing: persistent access without a stolen cookie
 
