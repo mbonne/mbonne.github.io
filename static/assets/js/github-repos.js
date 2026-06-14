@@ -43,33 +43,67 @@
     return rtf.format(-Math.floor(days / 365),             'year');
   }
 
-  function buildCard(repo) {
-    var langColour = repo.language ? (LANG_COLORS[repo.language] || '#6272a4') : null;
-    var langSpan = repo.language
-      ? '<span class="repo-language">' +
-          '<span class="repo-lang-dot" style="background:' + langColour + '"></span>' +
-          escHtml(repo.language) +
-        '</span>'
-      : '';
-    var desc = repo.description
-      ? escHtml(repo.description)
-      : '<span style="color:#6272a4">No description</span>';
-    return (
-      '<div class="repo-card">' +
-        '<div class="repo-card-header">' +
-          '<a class="repo-name" href="' + repo.html_url + '" target="_blank" rel="noopener noreferrer">' +
-            escHtml(repo.name) +
-          '</a>' +
-        '</div>' +
-        '<p class="repo-description">' + desc + '</p>' +
-        '<div class="repo-meta">' +
-          langSpan +
-          '<span class="repo-stars">&#9733; ' + repo.stargazers_count + '</span>' +
-          '<span class="repo-forks">' + repo.forks_count + ' forks</span>' +
-          '<span class="repo-updated">Updated ' + relativeTime(repo.pushed_at) + '</span>' +
-        '</div>' +
-      '</div>'
-    );
+  function safeUrl(url) {
+    return typeof url === 'string' && /^https:\/\//.test(url) ? url : '#';
+  }
+
+  function buildCardElement(repo) {
+    var card = document.createElement('div');
+    card.className = 'repo-card';
+
+    var header = document.createElement('div');
+    header.className = 'repo-card-header';
+    var link = document.createElement('a');
+    link.className = 'repo-name';
+    link.href = safeUrl(repo.html_url);
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = repo.name;
+    header.appendChild(link);
+    card.appendChild(header);
+
+    var desc = document.createElement('p');
+    desc.className = 'repo-description';
+    if (repo.description) {
+      desc.textContent = repo.description;
+    } else {
+      desc.style.color = '#6272a4';
+      desc.textContent = 'No description';
+    }
+    card.appendChild(desc);
+
+    var meta = document.createElement('div');
+    meta.className = 'repo-meta';
+
+    if (repo.language) {
+      var langColour = LANG_COLORS[repo.language] || '#6272a4';
+      var langSpan = document.createElement('span');
+      langSpan.className = 'repo-language';
+      var dot = document.createElement('span');
+      dot.className = 'repo-lang-dot';
+      dot.style.background = langColour;
+      langSpan.appendChild(dot);
+      langSpan.appendChild(document.createTextNode(repo.language));
+      meta.appendChild(langSpan);
+    }
+
+    var stars = document.createElement('span');
+    stars.className = 'repo-stars';
+    stars.textContent = '★ ' + repo.stargazers_count;
+    meta.appendChild(stars);
+
+    var forks = document.createElement('span');
+    forks.className = 'repo-forks';
+    forks.textContent = repo.forks_count + ' forks';
+    meta.appendChild(forks);
+
+    var updated = document.createElement('span');
+    updated.className = 'repo-updated';
+    updated.textContent = 'Updated ' + relativeTime(repo.pushed_at);
+    meta.appendChild(updated);
+
+    card.appendChild(meta);
+    return card;
   }
 
   function setContainer(html) {
@@ -78,11 +112,14 @@
   }
 
   function render(repos) {
+    var el = document.getElementById('github-repos-container');
+    if (!el) return;
+    el.innerHTML = '';
     if (!repos.length) {
-      setContainer('<p class="repos-status">No repositories found.</p>');
+      el.innerHTML = '<p class="repos-status">No repositories found.</p>';
       return;
     }
-    setContainer(repos.map(buildCard).join(''));
+    repos.forEach(function (repo) { el.appendChild(buildCardElement(repo)); });
   }
 
   function init() {
