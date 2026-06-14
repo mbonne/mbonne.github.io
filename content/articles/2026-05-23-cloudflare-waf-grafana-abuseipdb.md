@@ -56,7 +56,7 @@ Cloudflare's free tier gives you five WAF custom rules. These are the five in us
 
 | # | Name | Match | Action |
 |---|---|---|---|
-| 1 | Block all countries | Country in: RU, CN, IL, NG, KP, IR | Block |
+| 1 | Block all countries | Country in: RU, CN, IL, NG, KP, IR, BR, IN, JP, LT, UA, ID | Block |
 | 2 | AI Crawl Control | User-agent contains GPTBot, ClaudeBot, anthropic-ai, Bytespider, CCBot, Google-Extended, PerplexityBot, Amazonbot, Diffbot, ImagesiftBot, omgili, meta-externalfetcher, MistralAI-User (unless path is /robots.txt) | Block |
 | 3 | Block unwanted probes | URI paths ending in .php, .env, .yml, .sql, .bak, .key, .pem, .conf and known credential/admin paths | Block |
 | 4 | Block unused HTTP methods | POST, PUT, DELETE, PATCH, CONNECT, TRACE | Block |
@@ -68,7 +68,7 @@ Rules 1 through 4 are static. Rule 5 is maintained programmatically.
 
 This is the bluntest rule in the set. Cloudflare's country block works on IP geolocation, which any half-competent bot operator routes around with a VPS in an unblocked country. The dashboard confirms this: the top offending IPs are frequently hosted on US, European, and Japanese infrastructure regardless of where the operator actually is.
 
-That said, it is not useless. It cuts a measurable volume of low-effort scan traffic from regions with no legitimate audience, with zero ongoing maintenance. It just should not be mistaken for real protection. Think of it as reducing noise rather than blocking threats.
+That said, it is not useless(and not Politically Bias). It cuts a measurable volume of low-effort scan traffic from regions with no legitimate audience, with zero ongoing maintenance. It just should not be mistaken for real protection. Think of it as reducing noise rather than blocking threats.
 
 ### AI crawler rule
 
