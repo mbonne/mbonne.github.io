@@ -106,24 +106,28 @@
     return card;
   }
 
-  function setContainer(html) {
+  function showStatus(msg) {
     var el = document.getElementById('github-repos-container');
-    if (el) el.innerHTML = html;
+    if (!el) return;
+    var p = document.createElement('p');
+    p.className = 'repos-status';
+    p.textContent = msg;
+    el.replaceChildren(p);
   }
 
   function render(repos) {
     var el = document.getElementById('github-repos-container');
     if (!el) return;
-    el.innerHTML = '';
+    el.replaceChildren();
     if (!repos.length) {
-      el.innerHTML = '<p class="repos-status">No repositories found.</p>';
+      showStatus('No repositories found.');
       return;
     }
     repos.forEach(function (repo) { el.appendChild(buildCardElement(repo)); });
   }
 
   function init() {
-    setContainer('<p class="repos-status">Loading repositories\u2026</p>');
+    showStatus('Loading repositories\u2026');
 
     // Serve from cache if fresh
     try {
@@ -151,7 +155,7 @@
       })
       .catch(function (err) {
         console.error('github-repos:', err);
-        setContainer('<p class="repos-status">Unable to load repositories right now.</p>');
+        showStatus('Unable to load repositories right now.');
       });
   }
 
