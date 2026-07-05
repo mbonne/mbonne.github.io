@@ -69,6 +69,8 @@ A condensed view of a good starting base of CA Policy below.
 | MFA to register a device or change security info          | Account takeover usually starts by registering the attacker's own MFA method. Gate the registration actions themselves                                                                            |
 | Token protection on desktop clients                       | Binds tokens to the device so a stolen token replayed elsewhere fails                                                                                                                             |
 
+> Token protection needs Entra ID P1, a Windows 10+ device that is Entra joined, hybrid joined, or registered (Server 2019+ hybrid joined also works), and a Primary Refresh Token, since bearer refresh tokens without a PRT get rejected outright. It only covers Teams, Exchange Online, and SharePoint Online today, on native Windows apps, not browser sign-ins unless you scope Client Apps to mobile apps and desktop clients. macOS 14+ and iOS/iPadOS 16+ are supported too, but still in preview: MDM-managed devices only, and they need the Microsoft Enterprise SSO plugin (or Platform SSO on macOS). Apple's native Mail and Calendar apps don't support it at all, so exclude them or users get blocked outright. Deploy in report-only mode first: [Microsoft's token protection deployment guide](https://learn.microsoft.com/entra/identity/conditional-access/deployment-guide-token-protection-windows) covers the rollout.
+
 ### Admins: assume they are being hunted
 
 | What                                                                         | Why                                                                                                                                     |
