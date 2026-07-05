@@ -18,7 +18,7 @@ schema_type: TechArticle
 
 Most small business tenants I look at have one of two Conditional Access setups: the security defaults toggle and nothing else, or a single "Require MFA for everyone" policy someone created in 2021 and never touched again. Both are better than nothing. Neither tells you what your tenant actually enforces, and neither survives the first exception request without turning into a mess.
 
-This post covers the approach I use in my lab tenant and roll out to customer tenants on Microsoft 365 Business Premium: a baseline of many small policies, each targeting one persona and enforcing one control.
+This post covers the approach I use and roll out to customer tenants on Microsoft 365 Business Premium: a baseline of many small policies, each targeting one persona and enforcing one control.
 
 ## Why many small policies
 
@@ -31,7 +31,7 @@ Splitting the baseline into small policies gives you:
 - **Honest reporting.** Report-only mode works per policy. You can pilot one control on a subset of users while the rest of the baseline stays enforced.
 - **Reusability.** The same policy set, minus tenant-specific apps and locations, deploys to the next tenant unchanged.
 
-The cost is policy count. For example my lab tenant runs 47 policies I can use as a baseline/minimum set. That sounds unmanageable until you add the second ingredient: a naming convention and personas.
+The cost is policy count. A baseline/minimum set runs to around 47 policies. That sounds unmanageable until you add the second ingredient: a naming convention and personas.
 
 ## Personas and naming
 
@@ -126,6 +126,18 @@ Reasons to consider stepping up from Business Premium's P1:
 - **Restricted management AUs.** Protects your break-glass and security groups from helpdesk-tier role holders.
 
 For a small business the honest calculus: P1 plus the baseline above covers the attacks that actually hit small tenants, which are phishing and legacy auth spraying. P2 becomes worth it when you have real admin headcount, meaningful guest collaboration, or compliance requirements that expect risk-based response. If the license budget appears, PIM and risk-based CA are the first two features to switch on.
+
+## Audit the baseline after you build it
+
+Deploying the policies is not the finish line. A baseline drifts the moment someone adds an exclusion during an incident and forgets to remove it, or a new app registration slips through without being scoped into the right persona.
+
+- **Re-check report-only policies.** Anything left in report-only past the pilot window is not protecting anyone. Sweep for these on a schedule, not just at rollout.
+- **Review exclusion lists.** Every exclusion added under pressure (a locked-out exec, a broken legacy integration) is a standing gap until someone removes it. Diff exclusion lists against a known-good baseline periodically.
+- **Confirm break-glass accounts are still excluded correctly** and that their credentials and monitoring have not rotted since setup.
+- **Run an automated benchmark.** [Maester](https://maester.dev/) checks your tenant's CA policies (and broader Entra config) against Microsoft and CISA security baselines and gives you a pass/fail score instead of a manual read-through of 47 policies.
+- **Reconcile against sign-in logs.** Confirm policies are firing for the personas they target, not silently no-oping because of a scoping mistake or a licensing gap (see the P1 caveat above).
+
+Treat this as a recurring task, not a one-time close-out step after the initial build.
 
 ## Wrap-up
 
