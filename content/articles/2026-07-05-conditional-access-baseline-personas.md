@@ -78,9 +78,11 @@ A condensed view of a good starting base of CA Policy below.
 | MFA and phishing-resistant auth strength for privileged roles                | Admin credentials are the jackpot; they get the strongest credential requirement, always                                                |
 | Compliant device required for admin sign-in                                  | A phished admin password is useless without a managed machine (don't block your admin access though...)                                 |
 | Short sign-in frequency, no persistent browser, continuous access evaluation | Admin sessions should die quickly, and revoke near-instantly on password reset, account disable, or explicit token revocation           |
-| Protected actions: step-up before CA policy changes                          | The baseline protects the tenant; this protects the baseline. Modifying Conditional Access itself requires fresh phishing-resistant MFA |
+| Protected actions*: step-up before CA policy changes                         | The baseline protects the tenant; this protects the baseline. Modifying Conditional Access itself requires fresh phishing-resistant MFA |
 
 > The revocation above is [Continuous Access Evaluation](https://learn.microsoft.com/entra/identity/conditional-access/concept-continuous-access-evaluation), on by default for every Conditional Access policy regardless of license tier, no extra cost. It reacts fast to account-critical events: password change, account disable or delete, explicit token revocation, MFA registration. What it does not give you on P1 is automated response to anomalous sign-in behavior itself, impossible travel, leaked credentials, anonymized IPs, since detecting and acting on that requires Identity Protection risk conditions in Conditional Access, which is an Entra ID P2 feature (see the P2 section below).
+>
+> \*[Protected actions](https://learn.microsoft.com/entra/identity/role-based-access-control/protected-actions-overview) aren't a Conditional Access policy themselves: it's a **Roles & admins** security setting that layers on top. You still create a normal CA policy with an authentication context, then assign that context to specific permissions (like editing or deleting CA policies) under **Entra ID > Roles & admins > Protected actions**. That's what enforces the step-up at the moment someone touches those permissions, regardless of what role or path granted them.
 
 ### Internals: secure defaults that stay usable
 
