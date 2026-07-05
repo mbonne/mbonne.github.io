@@ -93,6 +93,8 @@ A condensed view of a good starting base of CA Policy below.
 | Block Azure management plane                                                     | MFA-gating the Azure portal is not enough when staff have no business being there at all                               |
 | Session limits on unmanaged devices                                              | Unmanaged browser sessions get shorter lifetimes and no "stay signed in"                                               |
 
+> App protection policies (MAM) are their own configuration surface: Intune app protection policies, targeted apps, PIN/encryption requirements, the app-based CA grant control, and how it interacts (or doesn't) with device compliance. Worth a dedicated article rather than a one-line summary here.
+
 ### Guests, service accounts, agents
 
 | What                                                                       | Why                                                                                                                                                     |
