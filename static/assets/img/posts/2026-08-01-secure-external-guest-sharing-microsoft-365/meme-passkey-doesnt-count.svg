@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial, Helvetica, sans-serif">
+  <title>Meme: guest's personal passkey means nothing to a tenant that has never seen it</title>
+  <rect width="800" height="450" fill="#282a36"/>
+
+  <text x="400" y="55" text-anchor="middle" font-size="32" font-weight="bold" fill="#f8f8f2" stroke="#000" stroke-width="1.5">GUEST: BUT I HAVE A PASSKEY</text>
+
+  <rect x="80" y="130" width="280" height="180" rx="14" fill="#44475a" stroke="#bd93f9" stroke-width="4"/>
+  <text x="220" y="200" text-anchor="middle" font-size="22" fill="#bd93f9" font-weight="bold">THEIR OWN</text>
+  <text x="220" y="228" text-anchor="middle" font-size="22" fill="#bd93f9" font-weight="bold">IDENTITY</text>
+  <text x="220" y="256" text-anchor="middle" font-size="22" fill="#bd93f9" font-weight="bold">PROVIDER</text>
+
+  <rect x="440" y="130" width="280" height="180" rx="14" fill="#44475a" stroke="#ffb86c" stroke-width="4"/>
+  <text x="580" y="200" text-anchor="middle" font-size="22" fill="#ffb86c" font-weight="bold">YOUR</text>
+  <text x="580" y="228" text-anchor="middle" font-size="22" fill="#ffb86c" font-weight="bold">ENTRA</text>
+  <text x="580" y="256" text-anchor="middle" font-size="22" fill="#ffb86c" font-weight="bold">TENANT</text>
+
+  <line x1="360" y1="220" x2="440" y2="220" stroke="#ff5555" stroke-width="6"/>
+  <line x1="380" y1="200" x2="420" y2="240" stroke="#ff5555" stroke-width="6"/>
+  <line x1="380" y1="240" x2="420" y2="200" stroke="#ff5555" stroke-width="6"/>
+
+  <text x="400" y="400" text-anchor="middle" font-size="30" font-weight="bold" fill="#f8f8f2" stroke="#000" stroke-width="1.5">ENTRA: NEVER HEARD OF HER</text>
+</svg>

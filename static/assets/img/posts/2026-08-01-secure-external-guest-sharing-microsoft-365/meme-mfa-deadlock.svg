@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Arial, Helvetica, sans-serif">
+  <title>Meme: guest stuck in a loop between registering MFA and needing MFA to register it</title>
+  <rect width="800" height="500" fill="#282a36"/>
+
+  <text x="400" y="55" text-anchor="middle" font-size="34" font-weight="bold" fill="#f8f8f2" stroke="#000" stroke-width="1.5">GUEST: LET ME REGISTER MY MFA</text>
+
+  <circle cx="230" cy="270" r="90" fill="#44475a" stroke="#50fa7b" stroke-width="4"/>
+  <text x="230" y="255" text-anchor="middle" font-size="20" fill="#50fa7b" font-weight="bold">REGISTER</text>
+  <text x="230" y="280" text-anchor="middle" font-size="20" fill="#50fa7b" font-weight="bold">SECURITY</text>
+  <text x="230" y="305" text-anchor="middle" font-size="20" fill="#50fa7b" font-weight="bold">INFO</text>
+
+  <circle cx="570" cy="270" r="90" fill="#44475a" stroke="#ff5555" stroke-width="4"/>
+  <text x="570" y="255" text-anchor="middle" font-size="20" fill="#ff5555" font-weight="bold">PROVE</text>
+  <text x="570" y="280" text-anchor="middle" font-size="20" fill="#ff5555" font-weight="bold">STRONG</text>
+  <text x="570" y="305" text-anchor="middle" font-size="20" fill="#ff5555" font-weight="bold">AUTH FIRST</text>
+
+  <path d="M 325 240 A 200 200 0 0 1 475 240" stroke="#f1fa8c" stroke-width="5" fill="none" marker-end="url(#arrow1)"/>
+  <path d="M 475 300 A 200 200 0 0 1 325 300" stroke="#f1fa8c" stroke-width="5" fill="none" marker-end="url(#arrow2)"/>
+
+  <defs>
+    <marker id="arrow1" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f1fa8c"/>
+    </marker>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f1fa8c"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="450" text-anchor="middle" font-size="30" font-weight="bold" fill="#f8f8f2" stroke="#000" stroke-width="1.5">CONDITIONAL ACCESS: NOT SO FAST</text>
+</svg>
