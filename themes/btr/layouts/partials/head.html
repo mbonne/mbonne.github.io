@@ -23,5 +23,6 @@
 <link rel="stylesheet" href="/assets/css/syntax.css">
 {{- partial "schema.html" . }}
 <script defer src="/assets/js/back-to-top.js"></script>
+{{ if .IsHome }}<script defer src="/assets/js/site-stats-ticker.js"></script>{{ end }}
 {{ if and .IsPage (eq .Type "articles") }}<script defer src="/assets/js/post-enhancements.js"></script>{{ end }}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ .Site.Params.cfAnalyticsToken }}"}'></script>
