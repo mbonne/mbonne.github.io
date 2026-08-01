@@ -628,6 +628,17 @@ hr { border-color: var(--line); }
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   color: var(--cyan);
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+  .stats-ticker {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 .stats-ticker__text--visible {
