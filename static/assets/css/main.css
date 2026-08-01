@@ -602,3 +602,34 @@ hr { border-color: var(--line); }
 .repos-status { color: var(--muted); }
 
 .avatar { width: 120px; height: 120px; border-radius: 50%; margin-bottom: 1.5rem; display: block; }
+
+/* ── Homepage stats ticker ─────────────────────────────────────────── */
+.stats-ticker {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.stats-ticker__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--green);
+  flex-shrink: 0;
+}
+
+.stats-ticker__text {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  color: var(--cyan);
+}
+
+.stats-ticker__text--visible {
+  opacity: 1;
+}
