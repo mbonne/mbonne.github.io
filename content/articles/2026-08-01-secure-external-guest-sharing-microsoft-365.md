@@ -74,8 +74,8 @@ sequenceDiagram
     CA-->>Guest: Access granted
 ```
 
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+<script src="/assets/js/mermaid.min.js"></script>
+<script>
   document.querySelectorAll('pre code.language-mermaid').forEach((el) => {
     const div = document.createElement('div');
     div.className = 'mermaid';
