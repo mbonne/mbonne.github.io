@@ -6,10 +6,10 @@
     var el = document.getElementById('visitor-ip');
     if (!el) return;
     var parts = [data.ip];
-    if (data.city && data.country_name) {
-      parts.push(data.city + ', ' + data.country_name);
-    } else if (data.country_name) {
-      parts.push(data.country_name);
+    if (data.city && data.country) {
+      parts.push(data.city + ', ' + data.country);
+    } else if (data.country) {
+      parts.push(data.country);
     }
     if (data.org) { parts.push(data.org); }
     el.textContent = parts.join(' — ');
@@ -17,7 +17,7 @@
   }
 
   function fetchAndCache() {
-    fetch('https://ipapi.co/json/')
+    fetch('/api/geoip')
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (!data.ip) return;
