@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-01T13:45:02Z",
-  "bots_blocked_today": 155,
-  "requests_today": 4588,
+  "generated_at": "2026-08-01T14:00:02Z",
+  "bots_blocked_today": 159,
+  "requests_today": 4611,
   "radar_stat": {
     "label": "Global DDoS traffic: UDP floods",
-    "value": "93%"
+    "value": "95%"
   }
 }
