@@ -254,18 +254,28 @@ pre {
   border-radius: 4px;
   overflow-x: auto;
   padding: 1rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 pre code {
   background-color: transparent;
   color: var(--fg);
   padding: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 /* Chroma wrapper (Hugo syntax highlighting) */
 .chroma {
   background-color: var(--line);
   border-radius: 4px;
+}
+
+.chroma .line,
+.chroma .cl {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 /* ── Copy button ────────────────────────────────────────────────────── */

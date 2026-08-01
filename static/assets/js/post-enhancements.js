@@ -13,7 +13,7 @@ function addCopyButtons() {
 
     btn.addEventListener("click", function () {
       var code = block.querySelector("code");
-      var text = code ? code.innerText : block.innerText;
+      var text = code ? code.textContent : block.textContent;
       navigator.clipboard.writeText(text).then(function () {
         btn.textContent = "Copied!";
         setTimeout(function () { btn.textContent = "Copy"; }, 2000);
