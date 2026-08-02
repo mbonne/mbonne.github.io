@@ -4,14 +4,14 @@
 
   function formatMessages(data) {
     var messages = [];
-    if (typeof data.bots_blocked_today === 'number') {
-      messages.push(data.bots_blocked_today.toLocaleString() + ' bots/scanners blocked today');
+    if (typeof data.unique_visitors_today === 'number') {
+      messages.push(data.unique_visitors_today.toLocaleString() + ' unique visitors today');
     }
-    if (typeof data.requests_today === 'number') {
-      messages.push(data.requests_today.toLocaleString() + ' requests served today');
+    if (typeof data.firewall_blocks_today === 'number') {
+      messages.push(data.firewall_blocks_today.toLocaleString() + ' firewall blocks today');
     }
-    if (data.radar_stat && data.radar_stat.label && data.radar_stat.value) {
-      messages.push(data.radar_stat.label + ': ' + data.radar_stat.value);
+    if (data.top_scanned_path && data.top_scanned_path.path && data.top_scanned_path.count) {
+      messages.push('Top scanned path: ' + data.top_scanned_path.path + ' (' + data.top_scanned_path.count.toLocaleString() + ' hits)');
     }
     return messages;
   }
