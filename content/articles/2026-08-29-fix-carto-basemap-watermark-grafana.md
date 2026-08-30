@@ -81,8 +81,6 @@ The obvious first move is to set the basemap type to `carto` (the built-in optio
 
 Grafana's `carto` basemap type only exposes three settings: theme (`auto`/`light`/`dark`), `showLabels`, and opacity, per the [official basemap layer reference](https://grafana.com/docs/grafana/latest/panels-visualizations/visualizations/geomap/#carto-basemap-layer). There is no key field in that schema. Add one anyway and Grafana accepts the JSON without complaint, saves it, and silently ignores the unknown property. The watermark stays, with no error in the UI or the logs to explain why.
 
-![two-panel comparison: carto type with apiKey field still showing watermark, versus xyz type with key in URL showing clean map](/assets/img/posts/2026-08-29-fix-carto-basemap-watermark-grafana/meme-silent-field.svg)
-
 The fix that actually works, also confirmed independently on the [Grafana community forum](https://community.grafana.com/t/geomap-carto-map-api-key-required-watermark/164268), is to stop using the `carto` type entirely and use the `xyz` (generic tile layer) type instead, with the key appended directly to the tile URL as a query parameter, exactly as CARTO's own setup instructions describe. `xyz` is a plain URL template plus an attribution string, so there's no schema mismatch to hit.
 
 ## Other things worth knowing

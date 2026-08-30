@@ -49,8 +49,6 @@ Get-MgPolicyCrossTenantAccessPolicyDefault | Select-Object -ExpandProperty Inbou
 
 None of this applies to a consumer email account, or any third party that hasn't been deliberately set up as a real B2B Entra tenant. That address has no home Entra tenant, so there is no MFA claim to trust in the first place, regardless of what security features exist on the third party's own side, a passkey, passwordless sign-in, or any other strong authentication on their personal or organisational account with their own provider. Those guests will always need to satisfy your Conditional Access requirements using a credential registered directly in your tenant.
 
-![Meme: a guest claims their personal passkey should count, split into two boxes, their own identity provider and your Entra tenant, with a red X between them and the caption Entra never heard of her](/assets/img/posts/2026-08-01-secure-external-guest-sharing-microsoft-365/meme-passkey-doesnt-count.svg)
-
 The diagram below makes the split explicit. Whatever strong authentication the third party already has lives entirely inside their own identity provider and secures sign-in to that provider only. It never crosses into your tenant. The credential Conditional Access actually checks is the one registered against the guest object in your directory, created during the security info step:
 
 ```mermaid
@@ -92,9 +90,6 @@ The identity provider box and the tenant box never exchange credential material 
 This is the failure mode worth planning around before it happens to a real client.
 
 A common baseline pairs two Conditional Access policies: one requiring MFA for all guest sign-ins, and a second targeting the [`urn:user:registersecurityinfo` user action](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-cloud-apps#user-actions) with a sign-in frequency requirement (forcing users to reconfirm strong authentication before they can register or change a method). If the second policy's scope includes guests, either directly or via a dynamic group that quietly picks them up, a first-time guest with no registered MFA method hits a deadlock: they can't register a method without already satisfying strong authentication, and they can't satisfy strong authentication without a registered method.
-
-![Meme: a guest stuck in a loop, one box says register security info, the other says prove strong auth first, arrows looping between them, caption Conditional Access says not so fast](/assets/img/posts/2026-08-01-secure-external-guest-sharing-microsoft-365/meme-mfa-deadlock.svg)
-
 The sign-in log symptom is a hard failure against error code 53003 ("access has been blocked by conditional access"), with the failing policies visible in the **Conditional Access** tab of the sign-in event. One easy misdirection: the **Application** field on the sign-in often shows an internal auth surface like "Microsoft App Access Panel" rather than the document or site the guest was actually trying to reach. Conditional Access evaluates at the authentication layer, before the guest reaches the target resource, so **don't waste time checking permissions on the SharePoint site when the failure is happening one step earlier**.
 
 The fix is to exclude guests from the register-security-info policy so they can reach the enrolment flow on first sign-in:

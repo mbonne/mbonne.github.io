@@ -21,8 +21,6 @@ OAuth 2.0 solves one problem: letting an application act on a user's behalf agai
 
 The access token carries no reliable claim about who the user is, only what the token bearer is allowed to do. Treating an OAuth access token as proof of login is the most common IAM mistake in application code, and it is why the [IETF RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749) spec itself never uses the word "authentication."
 
-![Two-panel comic: left panel shows OAuth 2.0 alone returning an access token with no way to identify the user; right panel shows adding an ID token via OIDC, which resolves who the user is](/assets/img/posts/2026-08-03-iam-identity-access-management-primer/meme-oauth-not-authn.svg)
-
 ### OIDC: the authentication layer on top of OAuth 2.0
 
 OpenID Connect closes that gap by adding an `id_token`, a signed JWT carrying identity claims (subject, name, email, issuer) alongside the OAuth access token. Under the hood it is still an OAuth 2.0 flow with an extra `openid` scope and a defined token format, standardised by the [OpenID Foundation](https://openid.net/specs/openid-connect-core-1_0.html).
