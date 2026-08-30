@@ -26,13 +26,13 @@ A static site has no server-side code, no database, and no login form. You might
 - **Protocol downgrade:** without `Strict-Transport-Security`, a user who types your domain directly could be intercepted on HTTP before the redirect kicks in
 - **Referrer leakage:** without a `Referrer-Policy`, navigation to external links leaks your full URL in the `Referer` header
 
-None of these are catastrophic on a read-only blog, but they're easy to fix and audited by tools like [Mozilla Observatory](https://observatory.mozilla.org){:target="_blank" rel="noopener noreferrer"} and [securityheaders.com](https://securityheaders.com){:target="_blank" rel="noopener noreferrer"}, which score your site publicly. Worth having them right.
+None of these are catastrophic on a read-only blog, but they're easy to fix and audited by tools like <a href="https://observatory.mozilla.org" target="_blank" rel="noopener noreferrer">Mozilla Observatory</a> and <a href="https://securityheaders.com" target="_blank" rel="noopener noreferrer">securityheaders.com</a>, which score your site publicly. Worth having them right.
 
 ## How Cloudflare header injection works
 
 Cloudflare operates as a reverse proxy in front of GitHub Pages. Requests reach Cloudflare first, Cloudflare fetches from GitHub Pages, and then returns the response to the visitor with any modifications you've configured applied in transit.
 
-[Response Header Transform Rules](https://developers.cloudflare.com/rules/transform/response-header-modification/){:target="_blank" rel="noopener noreferrer"} let you add, modify, or remove headers on responses before they leave Cloudflare's edge. They run on every matching request, require no code changes to your site, and don't affect caching behavior.
+<a href="https://developers.cloudflare.com/rules/transform/response-header-modification/" target="_blank" rel="noopener noreferrer">Response Header Transform Rules</a> let you add, modify, or remove headers on responses before they leave Cloudflare's edge. They run on every matching request, require no code changes to your site, and don't affect caching behavior.
 
 The free plan includes 10 active Transform Rules.
 
@@ -144,4 +144,4 @@ The built-in "Add security headers" toggle and a custom rule also overlap on `X-
 | `Content-Security-Policy` | Custom Transform Rule |
 | `X-Powered-By` removal | Rules > Settings > "Remove X-Powered-By" |
 
-The full Cloudflare documentation for Transform Rules is at [developers.cloudflare.com/rules/transform](https://developers.cloudflare.com/rules/transform/){:target="_blank" rel="noopener noreferrer"} and the response header modification reference is at [developers.cloudflare.com/rules/transform/response-header-modification](https://developers.cloudflare.com/rules/transform/response-header-modification/){:target="_blank" rel="noopener noreferrer"}.
+The full Cloudflare documentation for Transform Rules is at <a href="https://developers.cloudflare.com/rules/transform/" target="_blank" rel="noopener noreferrer">developers.cloudflare.com/rules/transform</a> and the response header modification reference is at <a href="https://developers.cloudflare.com/rules/transform/response-header-modification/" target="_blank" rel="noopener noreferrer">developers.cloudflare.com/rules/transform/response-header-modification</a>.

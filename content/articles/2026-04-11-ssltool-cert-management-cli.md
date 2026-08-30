@@ -13,7 +13,7 @@ schema_type: HowTo
 
 Creating a CSR or checking whether a certificate and private key belong together means remembering a handful of OpenSSL flags you probably last ran six months ago. Most web-based tools that offer to do this require pasting your private key into a form field, which is not a good idea.
 
-[ssltool](https://github.com/mbonne/ssltool){:target="_blank" rel="noopener noreferrer"} is a menu-driven shell script that handles CSR generation and key/certificate hash validation using the `openssl` binary that ships with macOS. No external dependencies, no network calls.
+<a href="https://github.com/mbonne/ssltool" target="_blank" rel="noopener noreferrer">ssltool</a> is a menu-driven shell script that handles CSR generation and key/certificate hash validation using the `openssl` binary that ships with macOS. No external dependencies, no network calls.
 
 ## What it does
 
@@ -52,4 +52,4 @@ ssltools
 
 > Pro Tip: add `~/bin` to your `$PATH` if it isn't already — a good place to collect personal scripts.
 
-The repo is at [github.com/mbonne/ssltool](https://github.com/mbonne/ssltool){:target="_blank" rel="noopener noreferrer"}.
+The repo is at <a href="https://github.com/mbonne/ssltool" target="_blank" rel="noopener noreferrer">github.com/mbonne/ssltool</a>.

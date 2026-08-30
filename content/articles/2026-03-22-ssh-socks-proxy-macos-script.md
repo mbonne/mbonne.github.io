@@ -13,7 +13,7 @@ schema_type: HowTo
 
 Setting up a SOCKS proxy over SSH on macOS involves more than one command. You need to background the tunnel, configure the active network interface to route traffic through it, and then verify the connection actually works. Do it often enough and you start wanting a script.
 
-[ssshp](https://github.com/mbonne/ssshp){:target="_blank" rel="noopener noreferrer"} (SOCKS SSH Proxy) automates that sequence. It handles the tunnel, the `networksetup` call to enable SOCKS on your NIC, and shows your WAN IP through the proxy so you can confirm traffic is routing correctly, all from a single interactive menu.
+<a href="https://github.com/mbonne/ssshp" target="_blank" rel="noopener noreferrer">ssshp</a> (SOCKS SSH Proxy) automates that sequence. It handles the tunnel, the `networksetup` call to enable SOCKS on your NIC, and shows your WAN IP through the proxy so you can confirm traffic is routing correctly, all from a single interactive menu.
 
 Tested on macOS 12.6.1, 15.1, 26.3.1(a)
 
@@ -84,4 +84,4 @@ It's not a VPN replacement. A VPN tunnels all traffic at the OS level. A SOCKS p
 
 If you're already doing this manually via `ssh -D`, ssshp removes the `networksetup` step and adds saved profiles. For occasional use that's enough.
 
-The repo is at [github.com/mbonne/ssshp](https://github.com/mbonne/ssshp){:target="_blank" rel="noopener noreferrer"}.
+The repo is at <a href="https://github.com/mbonne/ssshp" target="_blank" rel="noopener noreferrer">github.com/mbonne/ssshp</a>.
