@@ -18,5 +18,5 @@
     {{ end }}
   </div>
 </div>
-<script defer src="/assets/js/github-repos.js"></script>
+<script defer src="/assets/js/github-repos.js?v={{ readFile "static/assets/js/github-repos.js" | md5 }}"></script>
 {{ end }}
