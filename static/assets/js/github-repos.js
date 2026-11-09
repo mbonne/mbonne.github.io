@@ -1,5 +1,6 @@
 (function () {
-  var CACHE_KEY = 'btr_v1_github_repos';
+  var CACHE_KEY = 'btr_v2_github_repos'; // bumped: v1 cache held forks
+  var SHOW_FORK_TOPIC = 'show-on-site';
   var TTL = 86400000; // 24 hours in ms
   var API_URL = 'https://api.github.com/users/mbonne/repos?sort=pushed&direction=desc&per_page=20&type=owner';
   var EXCLUDE = 'mbonne.github.io';
@@ -146,7 +147,11 @@
       })
       .then(function (data) {
         var repos = data
-          .filter(function (r) { return r.name !== EXCLUDE; })
+          .filter(function (r) {
+            if (r.name === EXCLUDE) return false;
+            // Forks hidden unless tagged with the opt-in GitHub topic
+            return !r.fork || (r.topics || []).indexOf(SHOW_FORK_TOPIC) !== -1;
+          })
           .slice(0, MAX_REPOS);
         try {
           localStorage.setItem(CACHE_KEY, JSON.stringify({ timestamp: Date.now(), repos: repos }));

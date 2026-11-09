@@ -54,7 +54,7 @@ All HTML lives here. Hugo's lookup order: type-specific → `_default`.
 | `css/syntax.css` | Chroma syntax highlighting (dracula style, `.chroma` prefix). Regenerate: `hugo gen chromastyles --style=dracula > static/assets/css/syntax.css` |
 | `js/post-enhancements.js` | Loaded on articles only: TOC generation and sticky sidebar (>=3 headings, >=1400px), copy button on code blocks, scroll spy |
 | `js/back-to-top.js` | Back-to-top button, loaded on all pages |
-| `js/github-repos.js` | Projects page: GitHub API fetch, localStorage cache 24hr (`btr_v1_github_repos`), repo card rendering, excludes `mbonne.github.io` |
+| `js/github-repos.js` | Projects page: GitHub API fetch, localStorage cache 24hr (`btr_v2_github_repos`), repo card rendering, excludes `mbonne.github.io`, hides forks unless tagged with the `show-on-site` GitHub topic |
 
 ### Content (`content/`)
 
