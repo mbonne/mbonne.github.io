@@ -1,4 +1,5 @@
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 # AI crawlers — disallow training scrapes
@@ -20,9 +21,6 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-User-agent: PerplexityBot
-Disallow: /
-
 User-agent: Amazonbot
 Disallow: /
 
@@ -33,12 +31,6 @@ User-agent: ImagesiftBot
 Disallow: /
 
 User-agent: omgili
-Disallow: /
-
-User-agent: meta-externalfetcher
-Disallow: /
-
-User-agent: MistralAI-User
 Disallow: /
 
 Sitemap: https://buildtestrun.com/sitemap.xml
