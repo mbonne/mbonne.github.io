@@ -15,6 +15,6 @@ url: "/projects/"
 
 <div class="github-repos" data-github-user="isithuman-2026"></div>
 
-### Build Test Run Labs
+### Build Test Run
 
 <div class="github-repos" data-github-user="BuildTestRunLabs"></div>
