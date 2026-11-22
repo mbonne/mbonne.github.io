@@ -1,10 +1,9 @@
 (function () {
-  var CACHE_KEY = 'btr_v2_github_repos'; // bumped: v1 cache held forks
+  var CACHE_PREFIX = 'btr_v3_github_repos_'; // per-user cache key
   var SHOW_FORK_TOPIC = 'show-on-site';
   var TTL = 86400000; // 24 hours in ms
-  var API_URL = 'https://api.github.com/users/mbonne/repos?sort=pushed&direction=desc&per_page=20&type=owner';
   var EXCLUDE = 'mbonne.github.io';
-  var MAX_REPOS = 5;
+  var MAX_REPOS = 6;
 
   var LANG_COLORS = {
     'JavaScript': '#f1e05a',
@@ -107,34 +106,33 @@
     return card;
   }
 
-  function showStatus(msg) {
-    var el = document.getElementById('github-repos-container');
-    if (!el) return;
+  function showStatus(el, msg) {
     var p = document.createElement('p');
     p.className = 'repos-status';
     p.textContent = msg;
     el.replaceChildren(p);
   }
 
-  function render(repos) {
-    var el = document.getElementById('github-repos-container');
-    if (!el) return;
+  function render(el, repos) {
     el.replaceChildren();
     if (!repos.length) {
-      showStatus('No repositories found.');
+      showStatus(el, 'No repositories found.');
       return;
     }
     repos.forEach(function (repo) { el.appendChild(buildCardElement(repo)); });
   }
 
-  function init() {
-    showStatus('Loading repositories\u2026');
+  function load(el) {
+    var user = el.getAttribute('data-github-user');
+    var CACHE_KEY = CACHE_PREFIX + user;
+    var API_URL = 'https://api.github.com/users/' + encodeURIComponent(user) + '/repos?sort=pushed&direction=desc&per_page=20&type=owner';
+    showStatus(el, 'Loading repositories\u2026');
 
     // Serve from cache if fresh
     try {
       var cached = JSON.parse(localStorage.getItem(CACHE_KEY));
       if (cached && cached.timestamp && (Date.now() - cached.timestamp < TTL) && Array.isArray(cached.repos)) {
-        render(cached.repos);
+        render(el, cached.repos);
         return;
       }
     } catch (e) {}
@@ -156,12 +154,16 @@
         try {
           localStorage.setItem(CACHE_KEY, JSON.stringify({ timestamp: Date.now(), repos: repos }));
         } catch (e) {}
-        render(repos);
+        render(el, repos);
       })
       .catch(function (err) {
         console.error('github-repos:', err);
-        showStatus('Unable to load repositories right now.');
+        showStatus(el, 'Unable to load repositories right now.');
       });
+  }
+
+  function init() {
+    document.querySelectorAll('[data-github-user]').forEach(load);
   }
 
   if (document.readyState === 'loading') {

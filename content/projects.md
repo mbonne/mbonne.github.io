@@ -7,4 +7,10 @@ url: "/projects/"
 
 ## GitHub Repositories
 
-<div id="github-repos-container"></div>
+### mbonne
+
+<div class="github-repos" data-github-user="mbonne"></div>
+
+### isithuman-2026
+
+<div class="github-repos" data-github-user="isithuman-2026"></div>
